@@ -1,4 +1,4 @@
-.PHONY: backend frontend migrate test
+.PHONY: backend frontend migrate test demo-data reset-db
 
 backend:
 	cd backend && uv run uvicorn app.main:app --reload --port 8998
@@ -20,3 +20,10 @@ install-backend:
 
 install-frontend:
 	cd frontend && npm install
+
+demo-data:
+	uv run import_demo_data.py
+
+reset-db:
+	rm -f backend/portfolio.db
+	cd backend && uv run alembic upgrade head

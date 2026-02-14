@@ -59,6 +59,21 @@ make install-frontend   # npm install
 make migrate            # uv run alembic upgrade head
 make backend            # start backend server on port 8998
 make frontend           # start frontend dev server on port 3333
+make demo-data          # load demo data (backend must be running)
+make reset-db           # delete database and recreate empty schema
+```
+
+### Demo Data
+
+Load sample data (tags, holdings, FDs, transactions, allocation plans, and historical snapshots) to explore the app without connecting Zerodha. **Requires the backend server to be running.**
+
+```bash
+# Load demo data
+uv run import_demo_data.py
+
+# Clear everything and start fresh (stop the backend first)
+rm backend/portfolio.db
+cd backend && uv run alembic upgrade head   # Recreate empty database
 ```
 
 ## Connecting Zerodha
