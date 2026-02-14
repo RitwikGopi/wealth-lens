@@ -30,12 +30,12 @@ cd backend
 cp .env.example .env            # Edit with your keys if needed
 uv sync                         # Creates .venv and installs all deps
 uv run alembic upgrade head     # Create/migrate database
-uv run uvicorn app.main:app --reload   # Starts on http://localhost:8998
+uv run uvicorn app.main:app --reload --port 8998   # Starts on http://localhost:8998
 
 # 3. Setup frontend (new terminal)
 cd frontend
 npm install
-npm run dev                     # Starts on http://localhost:3333
+npm run dev -- --port 3333      # Starts on http://localhost:3333
 ```
 
 ### Without uv (manual venv)
@@ -48,17 +48,17 @@ source venv/bin/activate        # macOS/Linux
 pip install -r requirements.txt
 cp .env.example .env
 alembic upgrade head
-uvicorn app.main:app --reload
+uvicorn app.main:app --reload --port 8998
 ```
 
 ### Makefile shortcuts
 
 ```bash
-make install-backend    # pip install -r requirements.txt
+make install-backend    # uv sync
 make install-frontend   # npm install
-make migrate            # alembic upgrade head
-make backend            # start backend server
-make frontend           # start frontend dev server
+make migrate            # uv run alembic upgrade head
+make backend            # start backend server on port 8998
+make frontend           # start frontend dev server on port 3333
 ```
 
 ## Connecting Zerodha

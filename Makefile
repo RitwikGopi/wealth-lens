@@ -1,22 +1,22 @@
 .PHONY: backend frontend migrate test
 
 backend:
-	cd backend && uvicorn app.main:app --reload
+	cd backend && uv run uvicorn app.main:app --reload --port 8998
 
 frontend:
-	cd frontend && npm run dev
+	cd frontend && npm run dev -- --port 3333
 
 migrate:
-	cd backend && alembic upgrade head
+	cd backend && uv run alembic upgrade head
 
 migration:
-	cd backend && alembic revision --autogenerate -m "$(msg)"
+	cd backend && uv run alembic revision --autogenerate -m "$(msg)"
 
 test:
-	cd backend && python -m pytest tests/ -v
+	cd backend && uv run pytest tests/ -v
 
 install-backend:
-	cd backend && pip install -r requirements.txt
+	cd backend && uv sync
 
 install-frontend:
 	cd frontend && npm install
