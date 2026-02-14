@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+.venv/
+
+# Environment
+.env
+*.env.local
+.env.production
+.env.production.local
+
+# Database
+*.db
+*.db.backup*
+*.sqlite
+*.sqlite3
+
+# Secrets & certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.cert
+
+# Claude Code
+CLAUDE.md
+.claude/
+.team-memory/
+
+# Playwright MCP screenshots
+.playwright-mcp/
+
+# QA screenshots
+*.png
+
+# mypy
+.mypy_cache/
+
+# Test databases
+test-portfolio.db
+
+# Node
+node_modules/
+.next/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

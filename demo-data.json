@@ -1,0 +1,3541 @@
+{
+  "tags": [
+    {
+      "name": "Equity",
+      "description": "Equity investments",
+      "color": "#4CAF50"
+    },
+    {
+      "name": "Large Cap",
+      "parent": "Equity",
+      "description": "Large cap stocks",
+      "color": "#66BB6A"
+    },
+    {
+      "name": "Mid Cap",
+      "parent": "Equity",
+      "description": "Mid cap stocks",
+      "color": "#81C784"
+    },
+    {
+      "name": "Small Cap",
+      "parent": "Equity",
+      "description": "Small cap stocks",
+      "color": "#A5D6A7"
+    },
+    {
+      "name": "Fixed Income",
+      "description": "Fixed income instruments",
+      "color": "#2196F3"
+    },
+    {
+      "name": "Bank FD",
+      "parent": "Fixed Income",
+      "description": "Bank fixed deposits",
+      "color": "#42A5F5"
+    },
+    {
+      "name": "IT",
+      "parent": "Equity",
+      "description": "Information Technology sector",
+      "color": "#7E57C2"
+    },
+    {
+      "name": "Banking",
+      "parent": "Equity",
+      "description": "Banking & Financial sector",
+      "color": "#FF7043"
+    },
+    {
+      "name": "Pharma",
+      "parent": "Equity",
+      "description": "Pharmaceutical sector",
+      "color": "#26A69A"
+    },
+    {
+      "name": "FMCG",
+      "parent": "Equity",
+      "description": "Fast Moving Consumer Goods",
+      "color": "#FFA726"
+    },
+    {
+      "name": "Auto",
+      "parent": "Equity",
+      "description": "Automobile sector",
+      "color": "#5C6BC0"
+    },
+    {
+      "name": "Energy",
+      "parent": "Equity",
+      "description": "Energy & Oil sector",
+      "color": "#EF5350"
+    }
+  ],
+  "holdings": [
+    {
+      "symbol": "RELIANCE",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 25,
+      "average_price": 2480.5,
+      "current_price": 2715.3,
+      "current_value": 67882.5,
+      "pnl": 5870.0,
+      "source": "manual",
+      "notes": "Core holding - diversified conglomerate",
+      "tags": [
+        "Large Cap",
+        "Energy"
+      ]
+    },
+    {
+      "symbol": "TCS",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 15,
+      "average_price": 3650.0,
+      "current_price": 3892.45,
+      "current_value": 58386.75,
+      "pnl": 3636.75,
+      "source": "manual",
+      "notes": "IT bellwether",
+      "tags": [
+        "Large Cap",
+        "IT"
+      ]
+    },
+    {
+      "symbol": "INFY",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 40,
+      "average_price": 1520.75,
+      "current_price": 1685.2,
+      "current_value": 67408.0,
+      "pnl": 6578.0,
+      "source": "manual",
+      "notes": "IT services - long term hold",
+      "tags": [
+        "Large Cap",
+        "IT"
+      ]
+    },
+    {
+      "symbol": "HDFCBANK",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 35,
+      "average_price": 1580.0,
+      "current_price": 1742.6,
+      "current_value": 60991.0,
+      "pnl": 5691.0,
+      "source": "manual",
+      "notes": "Largest private sector bank",
+      "tags": [
+        "Large Cap",
+        "Banking"
+      ]
+    },
+    {
+      "symbol": "ICICIBANK",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 50,
+      "average_price": 980.25,
+      "current_price": 1128.9,
+      "current_value": 56445.0,
+      "pnl": 7432.5,
+      "source": "manual",
+      "notes": "Strong retail banking franchise",
+      "tags": [
+        "Large Cap",
+        "Banking"
+      ]
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 30,
+      "average_price": 1180.0,
+      "current_price": 1345.75,
+      "current_value": 40372.5,
+      "pnl": 4972.5,
+      "source": "manual",
+      "notes": "Pharma leader",
+      "tags": [
+        "Large Cap",
+        "Pharma"
+      ]
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 20,
+      "average_price": 2350.0,
+      "current_price": 2510.8,
+      "current_value": 50216.0,
+      "pnl": 3216.0,
+      "source": "manual",
+      "notes": "FMCG market leader",
+      "tags": [
+        "Large Cap",
+        "FMCG"
+      ]
+    },
+    {
+      "symbol": "TATAMOTORS",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 80,
+      "average_price": 720.5,
+      "current_price": 815.3,
+      "current_value": 65224.0,
+      "pnl": 7584.0,
+      "source": "manual",
+      "notes": "EV play + JLR turnaround",
+      "tags": [
+        "Large Cap",
+        "Auto"
+      ]
+    },
+    {
+      "symbol": "PERSISTENT",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 12,
+      "average_price": 4850.0,
+      "current_price": 5320.15,
+      "current_value": 63841.8,
+      "pnl": 5641.8,
+      "source": "manual",
+      "notes": "Mid-cap IT - high growth",
+      "tags": [
+        "Mid Cap",
+        "IT"
+      ]
+    },
+    {
+      "symbol": "FEDERALBNK",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 200,
+      "average_price": 162.3,
+      "current_price": 185.7,
+      "current_value": 37140.0,
+      "pnl": 4680.0,
+      "source": "manual",
+      "notes": "Mid-cap bank with improving metrics",
+      "tags": [
+        "Mid Cap",
+        "Banking"
+      ]
+    },
+    {
+      "symbol": "AFFLE",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 25,
+      "average_price": 1150.0,
+      "current_price": 1085.4,
+      "current_value": 27135.0,
+      "pnl": -1615.0,
+      "source": "manual",
+      "notes": "Adtech platform - volatile but high potential",
+      "tags": [
+        "Small Cap",
+        "IT"
+      ]
+    },
+    {
+      "symbol": "MARICO",
+      "exchange": "NSE",
+      "instrument_type": "EQ",
+      "quantity": 60,
+      "average_price": 545.0,
+      "current_price": 612.25,
+      "current_value": 36735.0,
+      "pnl": 4035.0,
+      "source": "manual",
+      "notes": "Defensive FMCG play",
+      "tags": [
+        "Mid Cap",
+        "FMCG"
+      ]
+    }
+  ],
+  "fixed_deposits": [
+    {
+      "bank_name": "SBI",
+      "principal": 200000.0,
+      "interest_rate": 7.1,
+      "compounding_frequency": "quarterly",
+      "start_date": "2025-03-15",
+      "maturity_date": "2026-09-15",
+      "maturity_amount": 221638.42,
+      "is_cumulative": true,
+      "auto_renew": false,
+      "notes": "18-month FD at special rate",
+      "status": "active",
+      "tags": [
+        "Bank FD"
+      ]
+    },
+    {
+      "bank_name": "HDFC Bank",
+      "principal": 300000.0,
+      "interest_rate": 7.25,
+      "compounding_frequency": "quarterly",
+      "start_date": "2025-06-01",
+      "maturity_date": "2026-12-01",
+      "maturity_amount": 333462.18,
+      "is_cumulative": true,
+      "auto_renew": true,
+      "notes": "18-month FD",
+      "status": "active",
+      "tags": [
+        "Bank FD"
+      ]
+    },
+    {
+      "bank_name": "ICICI Bank",
+      "principal": 150000.0,
+      "interest_rate": 6.9,
+      "compounding_frequency": "quarterly",
+      "start_date": "2025-01-10",
+      "maturity_date": "2026-01-10",
+      "maturity_amount": 160659.38,
+      "is_cumulative": true,
+      "auto_renew": false,
+      "notes": "1-year FD - matured and closed",
+      "status": "closed",
+      "closure_date": "2026-01-10",
+      "closure_amount": 160659.38,
+      "tags": [
+        "Bank FD"
+      ]
+    },
+    {
+      "bank_name": "Bajaj Finance",
+      "principal": 250000.0,
+      "interest_rate": 7.75,
+      "compounding_frequency": "quarterly",
+      "start_date": "2025-09-01",
+      "maturity_date": "2027-09-01",
+      "maturity_amount": 290912.5,
+      "is_cumulative": true,
+      "auto_renew": false,
+      "notes": "2-year corporate FD at premium rate",
+      "status": "active",
+      "tags": [
+        "Bank FD"
+      ]
+    },
+    {
+      "bank_name": "Post Office",
+      "principal": 100000.0,
+      "interest_rate": 7.5,
+      "compounding_frequency": "quarterly",
+      "start_date": "2025-04-01",
+      "maturity_date": "2030-04-01",
+      "maturity_amount": 144995.28,
+      "is_cumulative": true,
+      "auto_renew": false,
+      "notes": "5-year NSC equivalent",
+      "status": "active",
+      "tags": [
+        "Bank FD"
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "type": "buy",
+      "symbol": "RELIANCE",
+      "quantity": 10,
+      "price": 2520.0,
+      "amount": 25200.0,
+      "date": "2025-02-10",
+      "notes": "Initial position"
+    },
+    {
+      "type": "buy",
+      "symbol": "RELIANCE",
+      "quantity": 15,
+      "price": 2454.17,
+      "amount": 36812.5,
+      "date": "2025-06-18",
+      "notes": "Added on dip"
+    },
+    {
+      "type": "dividend",
+      "symbol": "RELIANCE",
+      "amount": 200.0,
+      "date": "2025-09-05",
+      "notes": "Interim dividend @ \u20b98/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "TCS",
+      "quantity": 10,
+      "price": 3580.0,
+      "amount": 35800.0,
+      "date": "2025-01-15",
+      "notes": "Post-results entry"
+    },
+    {
+      "type": "buy",
+      "symbol": "TCS",
+      "quantity": 5,
+      "price": 3790.0,
+      "amount": 18950.0,
+      "date": "2025-08-22",
+      "notes": "Added more"
+    },
+    {
+      "type": "dividend",
+      "symbol": "TCS",
+      "amount": 1050.0,
+      "date": "2025-07-10",
+      "notes": "Final dividend @ \u20b970/share"
+    },
+    {
+      "type": "dividend",
+      "symbol": "TCS",
+      "amount": 420.0,
+      "date": "2025-11-15",
+      "notes": "Interim dividend @ \u20b928/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "INFY",
+      "quantity": 25,
+      "price": 1480.0,
+      "amount": 37000.0,
+      "date": "2025-03-05",
+      "notes": "Core IT position"
+    },
+    {
+      "type": "buy",
+      "symbol": "INFY",
+      "quantity": 15,
+      "price": 1588.58,
+      "amount": 23828.75,
+      "date": "2025-07-12",
+      "notes": "Averaging up"
+    },
+    {
+      "type": "dividend",
+      "symbol": "INFY",
+      "amount": 720.0,
+      "date": "2025-06-20",
+      "notes": "Final dividend @ \u20b918/share"
+    },
+    {
+      "type": "dividend",
+      "symbol": "INFY",
+      "amount": 800.0,
+      "date": "2025-12-01",
+      "notes": "Interim dividend @ \u20b920/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "HDFCBANK",
+      "quantity": 20,
+      "price": 1540.0,
+      "amount": 30800.0,
+      "date": "2025-01-20",
+      "notes": "Banking sector bet"
+    },
+    {
+      "type": "buy",
+      "symbol": "HDFCBANK",
+      "quantity": 15,
+      "price": 1633.33,
+      "amount": 24500.0,
+      "date": "2025-05-14",
+      "notes": "Added post Q4 results"
+    },
+    {
+      "type": "dividend",
+      "symbol": "HDFCBANK",
+      "amount": 665.0,
+      "date": "2025-08-01",
+      "notes": "Dividend @ \u20b919/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "ICICIBANK",
+      "quantity": 30,
+      "price": 960.0,
+      "amount": 28800.0,
+      "date": "2025-02-25",
+      "notes": "Value pick"
+    },
+    {
+      "type": "buy",
+      "symbol": "ICICIBANK",
+      "quantity": 20,
+      "price": 1010.63,
+      "amount": 20212.5,
+      "date": "2025-09-10",
+      "notes": "Increased position"
+    },
+    {
+      "type": "dividend",
+      "symbol": "ICICIBANK",
+      "amount": 500.0,
+      "date": "2025-08-15",
+      "notes": "Dividend @ \u20b910/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "SUNPHARMA",
+      "quantity": 30,
+      "price": 1180.0,
+      "amount": 35400.0,
+      "date": "2025-04-08",
+      "notes": "Pharma exposure"
+    },
+    {
+      "type": "dividend",
+      "symbol": "SUNPHARMA",
+      "amount": 225.0,
+      "date": "2025-11-20",
+      "notes": "Dividend @ \u20b97.50/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "HINDUNILVR",
+      "quantity": 20,
+      "price": 2350.0,
+      "amount": 47000.0,
+      "date": "2025-03-20",
+      "notes": "Defensive allocation"
+    },
+    {
+      "type": "dividend",
+      "symbol": "HINDUNILVR",
+      "amount": 700.0,
+      "date": "2025-07-05",
+      "notes": "Dividend @ \u20b935/share"
+    },
+    {
+      "type": "dividend",
+      "symbol": "HINDUNILVR",
+      "amount": 380.0,
+      "date": "2025-12-10",
+      "notes": "Interim dividend @ \u20b919/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "TATAMOTORS",
+      "quantity": 50,
+      "price": 680.0,
+      "amount": 34000.0,
+      "date": "2025-02-15",
+      "notes": "EV theme entry"
+    },
+    {
+      "type": "buy",
+      "symbol": "TATAMOTORS",
+      "quantity": 30,
+      "price": 787.5,
+      "amount": 23625.0,
+      "date": "2025-07-28",
+      "notes": "Post JLR results rally"
+    },
+    {
+      "type": "dividend",
+      "symbol": "TATAMOTORS",
+      "amount": 480.0,
+      "date": "2025-09-25",
+      "notes": "Dividend @ \u20b96/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "PERSISTENT",
+      "quantity": 8,
+      "price": 4720.0,
+      "amount": 37760.0,
+      "date": "2025-05-05",
+      "notes": "Mid-cap IT pick"
+    },
+    {
+      "type": "buy",
+      "symbol": "PERSISTENT",
+      "quantity": 4,
+      "price": 5110.0,
+      "amount": 20440.0,
+      "date": "2025-10-15",
+      "notes": "Growth story intact"
+    },
+    {
+      "type": "dividend",
+      "symbol": "PERSISTENT",
+      "amount": 120.0,
+      "date": "2025-08-10",
+      "notes": "Dividend @ \u20b910/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "FEDERALBNK",
+      "quantity": 150,
+      "price": 155.0,
+      "amount": 23250.0,
+      "date": "2025-03-12",
+      "notes": "Small bank high growth"
+    },
+    {
+      "type": "buy",
+      "symbol": "FEDERALBNK",
+      "quantity": 50,
+      "price": 184.2,
+      "amount": 9210.0,
+      "date": "2025-11-05",
+      "notes": "Added more"
+    },
+    {
+      "type": "dividend",
+      "symbol": "FEDERALBNK",
+      "amount": 225.0,
+      "date": "2025-09-15",
+      "notes": "Dividend @ \u20b91.50/share"
+    },
+    {
+      "type": "buy",
+      "symbol": "AFFLE",
+      "quantity": 25,
+      "price": 1150.0,
+      "amount": 28750.0,
+      "date": "2025-06-02",
+      "notes": "Adtech bet"
+    },
+    {
+      "type": "buy",
+      "symbol": "MARICO",
+      "quantity": 60,
+      "price": 545.0,
+      "amount": 32700.0,
+      "date": "2025-04-18",
+      "notes": "Defensive FMCG"
+    },
+    {
+      "type": "dividend",
+      "symbol": "MARICO",
+      "amount": 390.0,
+      "date": "2025-10-01",
+      "notes": "Dividend @ \u20b96.50/share"
+    },
+    {
+      "type": "deposit",
+      "amount": 200000.0,
+      "date": "2025-01-05",
+      "notes": "Q1 capital infusion for equity investments"
+    },
+    {
+      "type": "deposit",
+      "amount": 200000.0,
+      "date": "2025-03-01",
+      "notes": "Q1 additional capital for equity + FDs"
+    },
+    {
+      "type": "deposit",
+      "amount": 100000.0,
+      "date": "2025-05-01",
+      "notes": "Q2 capital infusion"
+    },
+    {
+      "type": "deposit",
+      "amount": 75000.0,
+      "date": "2025-07-01",
+      "notes": "Q3 capital infusion"
+    },
+    {
+      "type": "sell",
+      "symbol": "WIPRO",
+      "quantity": 50,
+      "price": 485.0,
+      "amount": 24250.0,
+      "date": "2025-08-05",
+      "notes": "Exited WIPRO - reallocating to TCS",
+      "realized_pnl": 2750.0
+    },
+    {
+      "type": "sell",
+      "symbol": "BHARTIARTL",
+      "quantity": 10,
+      "price": 1680.0,
+      "amount": 16800.0,
+      "date": "2025-10-20",
+      "notes": "Partial profit booking",
+      "realized_pnl": 4300.0
+    }
+  ],
+  "kite_backfill_data": {
+    "status": "success",
+    "data": {
+      "state": "SUCCESS",
+      "result": {
+        "2025-01-15": {
+          "portfolio": {
+            "total_value": 66600.0,
+            "equity": 66600.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-16": {
+          "portfolio": {
+            "total_value": 72925.33,
+            "equity": 72925.33,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-17": {
+          "portfolio": {
+            "total_value": 78785.06,
+            "equity": 78785.06,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-18": {
+          "portfolio": {
+            "total_value": 78785.06,
+            "equity": 78785.06,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-19": {
+          "portfolio": {
+            "total_value": 78785.06,
+            "equity": 78785.06,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-20": {
+          "portfolio": {
+            "total_value": 83810.52,
+            "equity": 83810.52,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-21": {
+          "portfolio": {
+            "total_value": 88818.7,
+            "equity": 88818.7,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-22": {
+          "portfolio": {
+            "total_value": 95106.67,
+            "equity": 95106.67,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-23": {
+          "portfolio": {
+            "total_value": 101015.92,
+            "equity": 101015.92,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-24": {
+          "portfolio": {
+            "total_value": 107024.75,
+            "equity": 107024.75,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-25": {
+          "portfolio": {
+            "total_value": 107024.75,
+            "equity": 107024.75,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-26": {
+          "portfolio": {
+            "total_value": 107024.75,
+            "equity": 107024.75,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-27": {
+          "portfolio": {
+            "total_value": 114120.12,
+            "equity": 114120.12,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-28": {
+          "portfolio": {
+            "total_value": 118872.75,
+            "equity": 118872.75,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-29": {
+          "portfolio": {
+            "total_value": 124189.4,
+            "equity": 124189.4,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-30": {
+          "portfolio": {
+            "total_value": 129596.97,
+            "equity": 129596.97,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-01-31": {
+          "portfolio": {
+            "total_value": 135400.0,
+            "equity": 135400.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-01": {
+          "portfolio": {
+            "total_value": 135400.0,
+            "equity": 135400.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-02": {
+          "portfolio": {
+            "total_value": 135400.0,
+            "equity": 135400.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-03": {
+          "portfolio": {
+            "total_value": 137902.92,
+            "equity": 137902.92,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-04": {
+          "portfolio": {
+            "total_value": 140656.57,
+            "equity": 140656.57,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-05": {
+          "portfolio": {
+            "total_value": 144044.96,
+            "equity": 144044.96,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-06": {
+          "portfolio": {
+            "total_value": 144893.6,
+            "equity": 144893.6,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-07": {
+          "portfolio": {
+            "total_value": 146404.41,
+            "equity": 146404.41,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-08": {
+          "portfolio": {
+            "total_value": 146404.41,
+            "equity": 146404.41,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-09": {
+          "portfolio": {
+            "total_value": 146404.41,
+            "equity": 146404.41,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-10": {
+          "portfolio": {
+            "total_value": 150747.51,
+            "equity": 150747.51,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-11": {
+          "portfolio": {
+            "total_value": 153662.59,
+            "equity": 153662.59,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-12": {
+          "portfolio": {
+            "total_value": 154334.96,
+            "equity": 154334.96,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-13": {
+          "portfolio": {
+            "total_value": 155596.27,
+            "equity": 155596.27,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-14": {
+          "portfolio": {
+            "total_value": 159812.45,
+            "equity": 159812.45,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-15": {
+          "portfolio": {
+            "total_value": 159812.45,
+            "equity": 159812.45,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-16": {
+          "portfolio": {
+            "total_value": 159812.45,
+            "equity": 159812.45,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-17": {
+          "portfolio": {
+            "total_value": 163156.2,
+            "equity": 163156.2,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-18": {
+          "portfolio": {
+            "total_value": 166324.44,
+            "equity": 166324.44,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-19": {
+          "portfolio": {
+            "total_value": 169944.77,
+            "equity": 169944.77,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-20": {
+          "portfolio": {
+            "total_value": 172065.0,
+            "equity": 172065.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-21": {
+          "portfolio": {
+            "total_value": 175922.18,
+            "equity": 175922.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-22": {
+          "portfolio": {
+            "total_value": 175922.18,
+            "equity": 175922.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-23": {
+          "portfolio": {
+            "total_value": 175922.18,
+            "equity": 175922.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-24": {
+          "portfolio": {
+            "total_value": 180526.53,
+            "equity": 180526.53,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-25": {
+          "portfolio": {
+            "total_value": 182744.74,
+            "equity": 182744.74,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-26": {
+          "portfolio": {
+            "total_value": 182744.74,
+            "equity": 182744.74,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-27": {
+          "portfolio": {
+            "total_value": 185795.84,
+            "equity": 185795.84,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-02-28": {
+          "portfolio": {
+            "total_value": 188925.0,
+            "equity": 188925.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-01": {
+          "portfolio": {
+            "total_value": 188925.0,
+            "equity": 188925.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-02": {
+          "portfolio": {
+            "total_value": 188925.0,
+            "equity": 188925.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-03": {
+          "portfolio": {
+            "total_value": 190619.78,
+            "equity": 190619.78,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-04": {
+          "portfolio": {
+            "total_value": 191227.63,
+            "equity": 191227.63,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-05": {
+          "portfolio": {
+            "total_value": 191882.01,
+            "equity": 191882.01,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-06": {
+          "portfolio": {
+            "total_value": 194628.1,
+            "equity": 194628.1,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-07": {
+          "portfolio": {
+            "total_value": 196506.65,
+            "equity": 196506.65,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-08": {
+          "portfolio": {
+            "total_value": 196506.65,
+            "equity": 196506.65,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-09": {
+          "portfolio": {
+            "total_value": 196506.65,
+            "equity": 196506.65,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-10": {
+          "portfolio": {
+            "total_value": 198897.53,
+            "equity": 198897.53,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-11": {
+          "portfolio": {
+            "total_value": 203039.7,
+            "equity": 203039.7,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-12": {
+          "portfolio": {
+            "total_value": 204189.26,
+            "equity": 204189.26,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-13": {
+          "portfolio": {
+            "total_value": 208742.76,
+            "equity": 208742.76,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-14": {
+          "portfolio": {
+            "total_value": 208742.76,
+            "equity": 208742.76,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-15": {
+          "portfolio": {
+            "total_value": 208742.76,
+            "equity": 208742.76,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-16": {
+          "portfolio": {
+            "total_value": 208742.76,
+            "equity": 208742.76,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-17": {
+          "portfolio": {
+            "total_value": 209372.21,
+            "equity": 209372.21,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-18": {
+          "portfolio": {
+            "total_value": 212129.58,
+            "equity": 212129.58,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-19": {
+          "portfolio": {
+            "total_value": 214422.72,
+            "equity": 214422.72,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-20": {
+          "portfolio": {
+            "total_value": 220251.27,
+            "equity": 220251.27,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-21": {
+          "portfolio": {
+            "total_value": 223836.85,
+            "equity": 223836.85,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-22": {
+          "portfolio": {
+            "total_value": 223836.85,
+            "equity": 223836.85,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-23": {
+          "portfolio": {
+            "total_value": 223836.85,
+            "equity": 223836.85,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-24": {
+          "portfolio": {
+            "total_value": 232687.02,
+            "equity": 232687.02,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-25": {
+          "portfolio": {
+            "total_value": 235691.13,
+            "equity": 235691.13,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-26": {
+          "portfolio": {
+            "total_value": 238485.46,
+            "equity": 238485.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-27": {
+          "portfolio": {
+            "total_value": 240186.25,
+            "equity": 240186.25,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-28": {
+          "portfolio": {
+            "total_value": 242680.0,
+            "equity": 242680.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-29": {
+          "portfolio": {
+            "total_value": 242680.0,
+            "equity": 242680.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-30": {
+          "portfolio": {
+            "total_value": 242680.0,
+            "equity": 242680.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-03-31": {
+          "portfolio": {
+            "total_value": 242680.0,
+            "equity": 242680.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-01": {
+          "portfolio": {
+            "total_value": 242680.0,
+            "equity": 242680.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-02": {
+          "portfolio": {
+            "total_value": 242680.0,
+            "equity": 242680.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-03": {
+          "portfolio": {
+            "total_value": 248126.03,
+            "equity": 248126.03,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-04": {
+          "portfolio": {
+            "total_value": 245392.91,
+            "equity": 245392.91,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-05": {
+          "portfolio": {
+            "total_value": 245392.91,
+            "equity": 245392.91,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-06": {
+          "portfolio": {
+            "total_value": 245392.91,
+            "equity": 245392.91,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-07": {
+          "portfolio": {
+            "total_value": 249192.41,
+            "equity": 249192.41,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-08": {
+          "portfolio": {
+            "total_value": 254046.68,
+            "equity": 254046.68,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-09": {
+          "portfolio": {
+            "total_value": 255926.11,
+            "equity": 255926.11,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-10": {
+          "portfolio": {
+            "total_value": 255926.11,
+            "equity": 255926.11,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-11": {
+          "portfolio": {
+            "total_value": 260566.78,
+            "equity": 260566.78,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-12": {
+          "portfolio": {
+            "total_value": 260566.78,
+            "equity": 260566.78,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-13": {
+          "portfolio": {
+            "total_value": 260566.78,
+            "equity": 260566.78,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-14": {
+          "portfolio": {
+            "total_value": 260566.78,
+            "equity": 260566.78,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-15": {
+          "portfolio": {
+            "total_value": 264944.74,
+            "equity": 264944.74,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-16": {
+          "portfolio": {
+            "total_value": 274250.65,
+            "equity": 274250.65,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-17": {
+          "portfolio": {
+            "total_value": 278390.56,
+            "equity": 278390.56,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-18": {
+          "portfolio": {
+            "total_value": 278390.56,
+            "equity": 278390.56,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-19": {
+          "portfolio": {
+            "total_value": 278390.56,
+            "equity": 278390.56,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-20": {
+          "portfolio": {
+            "total_value": 278390.56,
+            "equity": 278390.56,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-21": {
+          "portfolio": {
+            "total_value": 285740.36,
+            "equity": 285740.36,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-22": {
+          "portfolio": {
+            "total_value": 297253.72,
+            "equity": 297253.72,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-23": {
+          "portfolio": {
+            "total_value": 300737.41,
+            "equity": 300737.41,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-24": {
+          "portfolio": {
+            "total_value": 304238.0,
+            "equity": 304238.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-25": {
+          "portfolio": {
+            "total_value": 304199.23,
+            "equity": 304199.23,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-26": {
+          "portfolio": {
+            "total_value": 304199.23,
+            "equity": 304199.23,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-27": {
+          "portfolio": {
+            "total_value": 304199.23,
+            "equity": 304199.23,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-28": {
+          "portfolio": {
+            "total_value": 308263.4,
+            "equity": 308263.4,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-29": {
+          "portfolio": {
+            "total_value": 313300.68,
+            "equity": 313300.68,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-04-30": {
+          "portfolio": {
+            "total_value": 318450.0,
+            "equity": 318450.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-01": {
+          "portfolio": {
+            "total_value": 318450.0,
+            "equity": 318450.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-02": {
+          "portfolio": {
+            "total_value": 320832.8,
+            "equity": 320832.8,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-03": {
+          "portfolio": {
+            "total_value": 320832.8,
+            "equity": 320832.8,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-04": {
+          "portfolio": {
+            "total_value": 320832.8,
+            "equity": 320832.8,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-05": {
+          "portfolio": {
+            "total_value": 324061.98,
+            "equity": 324061.98,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-06": {
+          "portfolio": {
+            "total_value": 324715.97,
+            "equity": 324715.97,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-07": {
+          "portfolio": {
+            "total_value": 327886.22,
+            "equity": 327886.22,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-08": {
+          "portfolio": {
+            "total_value": 329262.33,
+            "equity": 329262.33,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-09": {
+          "portfolio": {
+            "total_value": 331166.46,
+            "equity": 331166.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-10": {
+          "portfolio": {
+            "total_value": 331166.46,
+            "equity": 331166.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-11": {
+          "portfolio": {
+            "total_value": 331166.46,
+            "equity": 331166.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-12": {
+          "portfolio": {
+            "total_value": 331166.46,
+            "equity": 331166.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-13": {
+          "portfolio": {
+            "total_value": 330068.69,
+            "equity": 330068.69,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-14": {
+          "portfolio": {
+            "total_value": 329861.74,
+            "equity": 329861.74,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-15": {
+          "portfolio": {
+            "total_value": 330707.11,
+            "equity": 330707.11,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-16": {
+          "portfolio": {
+            "total_value": 333177.29,
+            "equity": 333177.29,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-17": {
+          "portfolio": {
+            "total_value": 333177.29,
+            "equity": 333177.29,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-18": {
+          "portfolio": {
+            "total_value": 333177.29,
+            "equity": 333177.29,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-19": {
+          "portfolio": {
+            "total_value": 338940.93,
+            "equity": 338940.93,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-20": {
+          "portfolio": {
+            "total_value": 338317.21,
+            "equity": 338317.21,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-21": {
+          "portfolio": {
+            "total_value": 349568.49,
+            "equity": 349568.49,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-22": {
+          "portfolio": {
+            "total_value": 349998.58,
+            "equity": 349998.58,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-23": {
+          "portfolio": {
+            "total_value": 351620.25,
+            "equity": 351620.25,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-24": {
+          "portfolio": {
+            "total_value": 351620.25,
+            "equity": 351620.25,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-25": {
+          "portfolio": {
+            "total_value": 351620.25,
+            "equity": 351620.25,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-26": {
+          "portfolio": {
+            "total_value": 351920.57,
+            "equity": 351920.57,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-27": {
+          "portfolio": {
+            "total_value": 352886.88,
+            "equity": 352886.88,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-28": {
+          "portfolio": {
+            "total_value": 353834.06,
+            "equity": 353834.06,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-29": {
+          "portfolio": {
+            "total_value": 353466.05,
+            "equity": 353466.05,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-30": {
+          "portfolio": {
+            "total_value": 355200.0,
+            "equity": 355200.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-05-31": {
+          "portfolio": {
+            "total_value": 355200.0,
+            "equity": 355200.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-01": {
+          "portfolio": {
+            "total_value": 355200.0,
+            "equity": 355200.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-02": {
+          "portfolio": {
+            "total_value": 355200.0,
+            "equity": 355200.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-03": {
+          "portfolio": {
+            "total_value": 358258.28,
+            "equity": 358258.28,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-04": {
+          "portfolio": {
+            "total_value": 359798.15,
+            "equity": 359798.15,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-05": {
+          "portfolio": {
+            "total_value": 363521.34,
+            "equity": 363521.34,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-06": {
+          "portfolio": {
+            "total_value": 369361.54,
+            "equity": 369361.54,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-07": {
+          "portfolio": {
+            "total_value": 369361.54,
+            "equity": 369361.54,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-08": {
+          "portfolio": {
+            "total_value": 369361.54,
+            "equity": 369361.54,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-09": {
+          "portfolio": {
+            "total_value": 370945.14,
+            "equity": 370945.14,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-10": {
+          "portfolio": {
+            "total_value": 367843.85,
+            "equity": 367843.85,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-11": {
+          "portfolio": {
+            "total_value": 366649.3,
+            "equity": 366649.3,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-12": {
+          "portfolio": {
+            "total_value": 368381.24,
+            "equity": 368381.24,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-13": {
+          "portfolio": {
+            "total_value": 364000.13,
+            "equity": 364000.13,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-14": {
+          "portfolio": {
+            "total_value": 364000.13,
+            "equity": 364000.13,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-15": {
+          "portfolio": {
+            "total_value": 364000.13,
+            "equity": 364000.13,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-16": {
+          "portfolio": {
+            "total_value": 359929.79,
+            "equity": 359929.79,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-17": {
+          "portfolio": {
+            "total_value": 357548.56,
+            "equity": 357548.56,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-18": {
+          "portfolio": {
+            "total_value": 361810.26,
+            "equity": 361810.26,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-19": {
+          "portfolio": {
+            "total_value": 360218.16,
+            "equity": 360218.16,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-20": {
+          "portfolio": {
+            "total_value": 361476.95,
+            "equity": 361476.95,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-21": {
+          "portfolio": {
+            "total_value": 361476.95,
+            "equity": 361476.95,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-22": {
+          "portfolio": {
+            "total_value": 361476.95,
+            "equity": 361476.95,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-23": {
+          "portfolio": {
+            "total_value": 364140.11,
+            "equity": 364140.11,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-24": {
+          "portfolio": {
+            "total_value": 362527.07,
+            "equity": 362527.07,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-25": {
+          "portfolio": {
+            "total_value": 374660.26,
+            "equity": 374660.26,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-26": {
+          "portfolio": {
+            "total_value": 380035.78,
+            "equity": 380035.78,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-27": {
+          "portfolio": {
+            "total_value": 388424.87,
+            "equity": 388424.87,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-28": {
+          "portfolio": {
+            "total_value": 388424.87,
+            "equity": 388424.87,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-29": {
+          "portfolio": {
+            "total_value": 388424.87,
+            "equity": 388424.87,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-06-30": {
+          "portfolio": {
+            "total_value": 388900.0,
+            "equity": 388900.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-01": {
+          "portfolio": {
+            "total_value": 389819.26,
+            "equity": 389819.26,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-02": {
+          "portfolio": {
+            "total_value": 393254.42,
+            "equity": 393254.42,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-03": {
+          "portfolio": {
+            "total_value": 397722.18,
+            "equity": 397722.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-04": {
+          "portfolio": {
+            "total_value": 402631.14,
+            "equity": 402631.14,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-05": {
+          "portfolio": {
+            "total_value": 402631.14,
+            "equity": 402631.14,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-06": {
+          "portfolio": {
+            "total_value": 402631.14,
+            "equity": 402631.14,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-07": {
+          "portfolio": {
+            "total_value": 405061.27,
+            "equity": 405061.27,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-08": {
+          "portfolio": {
+            "total_value": 400975.75,
+            "equity": 400975.75,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-09": {
+          "portfolio": {
+            "total_value": 409335.25,
+            "equity": 409335.25,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-10": {
+          "portfolio": {
+            "total_value": 411670.71,
+            "equity": 411670.71,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-11": {
+          "portfolio": {
+            "total_value": 412922.15,
+            "equity": 412922.15,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-12": {
+          "portfolio": {
+            "total_value": 412922.15,
+            "equity": 412922.15,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-13": {
+          "portfolio": {
+            "total_value": 412922.15,
+            "equity": 412922.15,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-14": {
+          "portfolio": {
+            "total_value": 410368.23,
+            "equity": 410368.23,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-15": {
+          "portfolio": {
+            "total_value": 410646.17,
+            "equity": 410646.17,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-16": {
+          "portfolio": {
+            "total_value": 411493.14,
+            "equity": 411493.14,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-17": {
+          "portfolio": {
+            "total_value": 411539.5,
+            "equity": 411539.5,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-18": {
+          "portfolio": {
+            "total_value": 415135.9,
+            "equity": 415135.9,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-19": {
+          "portfolio": {
+            "total_value": 415135.9,
+            "equity": 415135.9,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-20": {
+          "portfolio": {
+            "total_value": 415135.9,
+            "equity": 415135.9,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-21": {
+          "portfolio": {
+            "total_value": 417633.33,
+            "equity": 417633.33,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-22": {
+          "portfolio": {
+            "total_value": 419136.37,
+            "equity": 419136.37,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-23": {
+          "portfolio": {
+            "total_value": 420492.52,
+            "equity": 420492.52,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-24": {
+          "portfolio": {
+            "total_value": 423370.39,
+            "equity": 423370.39,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-25": {
+          "portfolio": {
+            "total_value": 431237.46,
+            "equity": 431237.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-26": {
+          "portfolio": {
+            "total_value": 431237.46,
+            "equity": 431237.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-27": {
+          "portfolio": {
+            "total_value": 431237.46,
+            "equity": 431237.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-28": {
+          "portfolio": {
+            "total_value": 430642.3,
+            "equity": 430642.3,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-29": {
+          "portfolio": {
+            "total_value": 430346.7,
+            "equity": 430346.7,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-30": {
+          "portfolio": {
+            "total_value": 432693.25,
+            "equity": 432693.25,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-07-31": {
+          "portfolio": {
+            "total_value": 435420.0,
+            "equity": 435420.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-01": {
+          "portfolio": {
+            "total_value": 434111.59,
+            "equity": 434111.59,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-02": {
+          "portfolio": {
+            "total_value": 434111.59,
+            "equity": 434111.59,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-03": {
+          "portfolio": {
+            "total_value": 434111.59,
+            "equity": 434111.59,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-04": {
+          "portfolio": {
+            "total_value": 433956.47,
+            "equity": 433956.47,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-05": {
+          "portfolio": {
+            "total_value": 438557.02,
+            "equity": 438557.02,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-06": {
+          "portfolio": {
+            "total_value": 432492.04,
+            "equity": 432492.04,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-07": {
+          "portfolio": {
+            "total_value": 438376.71,
+            "equity": 438376.71,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-08": {
+          "portfolio": {
+            "total_value": 439694.29,
+            "equity": 439694.29,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-09": {
+          "portfolio": {
+            "total_value": 439694.29,
+            "equity": 439694.29,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-10": {
+          "portfolio": {
+            "total_value": 439694.29,
+            "equity": 439694.29,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-11": {
+          "portfolio": {
+            "total_value": 444542.96,
+            "equity": 444542.96,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-12": {
+          "portfolio": {
+            "total_value": 448930.48,
+            "equity": 448930.48,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-13": {
+          "portfolio": {
+            "total_value": 448325.75,
+            "equity": 448325.75,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-14": {
+          "portfolio": {
+            "total_value": 447381.07,
+            "equity": 447381.07,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-15": {
+          "portfolio": {
+            "total_value": 447381.07,
+            "equity": 447381.07,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-16": {
+          "portfolio": {
+            "total_value": 447381.07,
+            "equity": 447381.07,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-17": {
+          "portfolio": {
+            "total_value": 447381.07,
+            "equity": 447381.07,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-18": {
+          "portfolio": {
+            "total_value": 441276.03,
+            "equity": 441276.03,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-19": {
+          "portfolio": {
+            "total_value": 449902.37,
+            "equity": 449902.37,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-20": {
+          "portfolio": {
+            "total_value": 451115.91,
+            "equity": 451115.91,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-21": {
+          "portfolio": {
+            "total_value": 454172.59,
+            "equity": 454172.59,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-22": {
+          "portfolio": {
+            "total_value": 454672.81,
+            "equity": 454672.81,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-23": {
+          "portfolio": {
+            "total_value": 454672.81,
+            "equity": 454672.81,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-24": {
+          "portfolio": {
+            "total_value": 454672.81,
+            "equity": 454672.81,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-25": {
+          "portfolio": {
+            "total_value": 453952.47,
+            "equity": 453952.47,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-26": {
+          "portfolio": {
+            "total_value": 453843.48,
+            "equity": 453843.48,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-27": {
+          "portfolio": {
+            "total_value": 456620.06,
+            "equity": 456620.06,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-28": {
+          "portfolio": {
+            "total_value": 461398.79,
+            "equity": 461398.79,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-29": {
+          "portfolio": {
+            "total_value": 462350.0,
+            "equity": 462350.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-30": {
+          "portfolio": {
+            "total_value": 462350.0,
+            "equity": 462350.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-08-31": {
+          "portfolio": {
+            "total_value": 462350.0,
+            "equity": 462350.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-01": {
+          "portfolio": {
+            "total_value": 462350.0,
+            "equity": 462350.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-02": {
+          "portfolio": {
+            "total_value": 468790.02,
+            "equity": 468790.02,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-03": {
+          "portfolio": {
+            "total_value": 466957.64,
+            "equity": 466957.64,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-04": {
+          "portfolio": {
+            "total_value": 467468.83,
+            "equity": 467468.83,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-05": {
+          "portfolio": {
+            "total_value": 467468.83,
+            "equity": 467468.83,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-06": {
+          "portfolio": {
+            "total_value": 467468.83,
+            "equity": 467468.83,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-07": {
+          "portfolio": {
+            "total_value": 467468.83,
+            "equity": 467468.83,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-08": {
+          "portfolio": {
+            "total_value": 468424.96,
+            "equity": 468424.96,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-09": {
+          "portfolio": {
+            "total_value": 468456.33,
+            "equity": 468456.33,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-10": {
+          "portfolio": {
+            "total_value": 475532.63,
+            "equity": 475532.63,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-11": {
+          "portfolio": {
+            "total_value": 477481.4,
+            "equity": 477481.4,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-12": {
+          "portfolio": {
+            "total_value": 478167.58,
+            "equity": 478167.58,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-13": {
+          "portfolio": {
+            "total_value": 478167.58,
+            "equity": 478167.58,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-14": {
+          "portfolio": {
+            "total_value": 478167.58,
+            "equity": 478167.58,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-15": {
+          "portfolio": {
+            "total_value": 468970.11,
+            "equity": 468970.11,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-16": {
+          "portfolio": {
+            "total_value": 467306.06,
+            "equity": 467306.06,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-17": {
+          "portfolio": {
+            "total_value": 469355.56,
+            "equity": 469355.56,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-18": {
+          "portfolio": {
+            "total_value": 473243.01,
+            "equity": 473243.01,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-19": {
+          "portfolio": {
+            "total_value": 480689.47,
+            "equity": 480689.47,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-20": {
+          "portfolio": {
+            "total_value": 480689.47,
+            "equity": 480689.47,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-21": {
+          "portfolio": {
+            "total_value": 480689.47,
+            "equity": 480689.47,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-22": {
+          "portfolio": {
+            "total_value": 476713.77,
+            "equity": 476713.77,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-23": {
+          "portfolio": {
+            "total_value": 481335.96,
+            "equity": 481335.96,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-24": {
+          "portfolio": {
+            "total_value": 487569.42,
+            "equity": 487569.42,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-25": {
+          "portfolio": {
+            "total_value": 486631.83,
+            "equity": 486631.83,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-26": {
+          "portfolio": {
+            "total_value": 484947.18,
+            "equity": 484947.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-27": {
+          "portfolio": {
+            "total_value": 484947.18,
+            "equity": 484947.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-28": {
+          "portfolio": {
+            "total_value": 484947.18,
+            "equity": 484947.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-29": {
+          "portfolio": {
+            "total_value": 495240.25,
+            "equity": 495240.25,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-09-30": {
+          "portfolio": {
+            "total_value": 495800.0,
+            "equity": 495800.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-01": {
+          "portfolio": {
+            "total_value": 494616.18,
+            "equity": 494616.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-02": {
+          "portfolio": {
+            "total_value": 494616.18,
+            "equity": 494616.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-03": {
+          "portfolio": {
+            "total_value": 494767.34,
+            "equity": 494767.34,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-04": {
+          "portfolio": {
+            "total_value": 494767.34,
+            "equity": 494767.34,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-05": {
+          "portfolio": {
+            "total_value": 494767.34,
+            "equity": 494767.34,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-06": {
+          "portfolio": {
+            "total_value": 489949.76,
+            "equity": 489949.76,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-07": {
+          "portfolio": {
+            "total_value": 496524.97,
+            "equity": 496524.97,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-08": {
+          "portfolio": {
+            "total_value": 492587.59,
+            "equity": 492587.59,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-09": {
+          "portfolio": {
+            "total_value": 501101.4,
+            "equity": 501101.4,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-10": {
+          "portfolio": {
+            "total_value": 508421.45,
+            "equity": 508421.45,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-11": {
+          "portfolio": {
+            "total_value": 508421.45,
+            "equity": 508421.45,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-12": {
+          "portfolio": {
+            "total_value": 508421.45,
+            "equity": 508421.45,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-13": {
+          "portfolio": {
+            "total_value": 510055.32,
+            "equity": 510055.32,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-14": {
+          "portfolio": {
+            "total_value": 507036.38,
+            "equity": 507036.38,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-15": {
+          "portfolio": {
+            "total_value": 507508.72,
+            "equity": 507508.72,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-16": {
+          "portfolio": {
+            "total_value": 508433.96,
+            "equity": 508433.96,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-17": {
+          "portfolio": {
+            "total_value": 514593.08,
+            "equity": 514593.08,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-18": {
+          "portfolio": {
+            "total_value": 514593.08,
+            "equity": 514593.08,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-19": {
+          "portfolio": {
+            "total_value": 514593.08,
+            "equity": 514593.08,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-20": {
+          "portfolio": {
+            "total_value": 514593.08,
+            "equity": 514593.08,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-21": {
+          "portfolio": {
+            "total_value": 514593.08,
+            "equity": 514593.08,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-22": {
+          "portfolio": {
+            "total_value": 508592.15,
+            "equity": 508592.15,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-23": {
+          "portfolio": {
+            "total_value": 498160.6,
+            "equity": 498160.6,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-24": {
+          "portfolio": {
+            "total_value": 505605.47,
+            "equity": 505605.47,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-25": {
+          "portfolio": {
+            "total_value": 505605.47,
+            "equity": 505605.47,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-26": {
+          "portfolio": {
+            "total_value": 505605.47,
+            "equity": 505605.47,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-27": {
+          "portfolio": {
+            "total_value": 517800.67,
+            "equity": 517800.67,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-28": {
+          "portfolio": {
+            "total_value": 523086.47,
+            "equity": 523086.47,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-29": {
+          "portfolio": {
+            "total_value": 523112.08,
+            "equity": 523112.08,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-30": {
+          "portfolio": {
+            "total_value": 525290.18,
+            "equity": 525290.18,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-10-31": {
+          "portfolio": {
+            "total_value": 525600.0,
+            "equity": 525600.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-01": {
+          "portfolio": {
+            "total_value": 525600.0,
+            "equity": 525600.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-02": {
+          "portfolio": {
+            "total_value": 525600.0,
+            "equity": 525600.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-03": {
+          "portfolio": {
+            "total_value": 524921.48,
+            "equity": 524921.48,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-04": {
+          "portfolio": {
+            "total_value": 532368.1,
+            "equity": 532368.1,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-05": {
+          "portfolio": {
+            "total_value": 532368.1,
+            "equity": 532368.1,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-06": {
+          "portfolio": {
+            "total_value": 531895.59,
+            "equity": 531895.59,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-07": {
+          "portfolio": {
+            "total_value": 532149.95,
+            "equity": 532149.95,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-08": {
+          "portfolio": {
+            "total_value": 532149.95,
+            "equity": 532149.95,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-09": {
+          "portfolio": {
+            "total_value": 532149.95,
+            "equity": 532149.95,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-10": {
+          "portfolio": {
+            "total_value": 536592.89,
+            "equity": 536592.89,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-11": {
+          "portfolio": {
+            "total_value": 535754.28,
+            "equity": 535754.28,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-12": {
+          "portfolio": {
+            "total_value": 535414.03,
+            "equity": 535414.03,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-13": {
+          "portfolio": {
+            "total_value": 535449.19,
+            "equity": 535449.19,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-14": {
+          "portfolio": {
+            "total_value": 535430.08,
+            "equity": 535430.08,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-15": {
+          "portfolio": {
+            "total_value": 535430.08,
+            "equity": 535430.08,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-16": {
+          "portfolio": {
+            "total_value": 535430.08,
+            "equity": 535430.08,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-17": {
+          "portfolio": {
+            "total_value": 541911.39,
+            "equity": 541911.39,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-18": {
+          "portfolio": {
+            "total_value": 542579.9,
+            "equity": 542579.9,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-19": {
+          "portfolio": {
+            "total_value": 547862.81,
+            "equity": 547862.81,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-20": {
+          "portfolio": {
+            "total_value": 549360.76,
+            "equity": 549360.76,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-21": {
+          "portfolio": {
+            "total_value": 553434.21,
+            "equity": 553434.21,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-22": {
+          "portfolio": {
+            "total_value": 553434.21,
+            "equity": 553434.21,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-23": {
+          "portfolio": {
+            "total_value": 553434.21,
+            "equity": 553434.21,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-24": {
+          "portfolio": {
+            "total_value": 549545.82,
+            "equity": 549545.82,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-25": {
+          "portfolio": {
+            "total_value": 542200.11,
+            "equity": 542200.11,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-26": {
+          "portfolio": {
+            "total_value": 544179.65,
+            "equity": 544179.65,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-27": {
+          "portfolio": {
+            "total_value": 546225.27,
+            "equity": 546225.27,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-28": {
+          "portfolio": {
+            "total_value": 548300.0,
+            "equity": 548300.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-29": {
+          "portfolio": {
+            "total_value": 548300.0,
+            "equity": 548300.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-11-30": {
+          "portfolio": {
+            "total_value": 548300.0,
+            "equity": 548300.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-01": {
+          "portfolio": {
+            "total_value": 548300.0,
+            "equity": 548300.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-02": {
+          "portfolio": {
+            "total_value": 543609.03,
+            "equity": 543609.03,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-03": {
+          "portfolio": {
+            "total_value": 541156.69,
+            "equity": 541156.69,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-04": {
+          "portfolio": {
+            "total_value": 542746.96,
+            "equity": 542746.96,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-05": {
+          "portfolio": {
+            "total_value": 550087.68,
+            "equity": 550087.68,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-06": {
+          "portfolio": {
+            "total_value": 550087.68,
+            "equity": 550087.68,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-07": {
+          "portfolio": {
+            "total_value": 550087.68,
+            "equity": 550087.68,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-08": {
+          "portfolio": {
+            "total_value": 551780.31,
+            "equity": 551780.31,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-09": {
+          "portfolio": {
+            "total_value": 553962.45,
+            "equity": 553962.45,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-10": {
+          "portfolio": {
+            "total_value": 549767.5,
+            "equity": 549767.5,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-11": {
+          "portfolio": {
+            "total_value": 559103.04,
+            "equity": 559103.04,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-12": {
+          "portfolio": {
+            "total_value": 560181.52,
+            "equity": 560181.52,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-13": {
+          "portfolio": {
+            "total_value": 560181.52,
+            "equity": 560181.52,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-14": {
+          "portfolio": {
+            "total_value": 560181.52,
+            "equity": 560181.52,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-15": {
+          "portfolio": {
+            "total_value": 562242.48,
+            "equity": 562242.48,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-16": {
+          "portfolio": {
+            "total_value": 556400.45,
+            "equity": 556400.45,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-17": {
+          "portfolio": {
+            "total_value": 557701.46,
+            "equity": 557701.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-18": {
+          "portfolio": {
+            "total_value": 556391.91,
+            "equity": 556391.91,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-19": {
+          "portfolio": {
+            "total_value": 554364.12,
+            "equity": 554364.12,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-20": {
+          "portfolio": {
+            "total_value": 554364.12,
+            "equity": 554364.12,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-21": {
+          "portfolio": {
+            "total_value": 554364.12,
+            "equity": 554364.12,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-22": {
+          "portfolio": {
+            "total_value": 555137.85,
+            "equity": 555137.85,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-23": {
+          "portfolio": {
+            "total_value": 558968.76,
+            "equity": 558968.76,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-24": {
+          "portfolio": {
+            "total_value": 559831.41,
+            "equity": 559831.41,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-25": {
+          "portfolio": {
+            "total_value": 559831.41,
+            "equity": 559831.41,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-26": {
+          "portfolio": {
+            "total_value": 558405.21,
+            "equity": 558405.21,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-27": {
+          "portfolio": {
+            "total_value": 558405.21,
+            "equity": 558405.21,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-28": {
+          "portfolio": {
+            "total_value": 558405.21,
+            "equity": 558405.21,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-29": {
+          "portfolio": {
+            "total_value": 562473.45,
+            "equity": 562473.45,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-30": {
+          "portfolio": {
+            "total_value": 562221.61,
+            "equity": 562221.61,
+            "mutual_fund": 0.0
+          }
+        },
+        "2025-12-31": {
+          "portfolio": {
+            "total_value": 562750.0,
+            "equity": 562750.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-01": {
+          "portfolio": {
+            "total_value": 566327.59,
+            "equity": 566327.59,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-02": {
+          "portfolio": {
+            "total_value": 562449.99,
+            "equity": 562449.99,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-03": {
+          "portfolio": {
+            "total_value": 562449.99,
+            "equity": 562449.99,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-04": {
+          "portfolio": {
+            "total_value": 562449.99,
+            "equity": 562449.99,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-05": {
+          "portfolio": {
+            "total_value": 570957.42,
+            "equity": 570957.42,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-06": {
+          "portfolio": {
+            "total_value": 571700.81,
+            "equity": 571700.81,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-07": {
+          "portfolio": {
+            "total_value": 565458.27,
+            "equity": 565458.27,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-08": {
+          "portfolio": {
+            "total_value": 562132.78,
+            "equity": 562132.78,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-09": {
+          "portfolio": {
+            "total_value": 551182.4,
+            "equity": 551182.4,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-10": {
+          "portfolio": {
+            "total_value": 551182.4,
+            "equity": 551182.4,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-11": {
+          "portfolio": {
+            "total_value": 551182.4,
+            "equity": 551182.4,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-12": {
+          "portfolio": {
+            "total_value": 549006.15,
+            "equity": 549006.15,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-13": {
+          "portfolio": {
+            "total_value": 550227.95,
+            "equity": 550227.95,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-14": {
+          "portfolio": {
+            "total_value": 555570.76,
+            "equity": 555570.76,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-15": {
+          "portfolio": {
+            "total_value": 548892.02,
+            "equity": 548892.02,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-16": {
+          "portfolio": {
+            "total_value": 549639.81,
+            "equity": 549639.81,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-17": {
+          "portfolio": {
+            "total_value": 549639.81,
+            "equity": 549639.81,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-18": {
+          "portfolio": {
+            "total_value": 549639.81,
+            "equity": 549639.81,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-19": {
+          "portfolio": {
+            "total_value": 550583.51,
+            "equity": 550583.51,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-20": {
+          "portfolio": {
+            "total_value": 554940.6,
+            "equity": 554940.6,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-21": {
+          "portfolio": {
+            "total_value": 558610.46,
+            "equity": 558610.46,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-22": {
+          "portfolio": {
+            "total_value": 563095.16,
+            "equity": 563095.16,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-23": {
+          "portfolio": {
+            "total_value": 569787.55,
+            "equity": 569787.55,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-24": {
+          "portfolio": {
+            "total_value": 569787.55,
+            "equity": 569787.55,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-25": {
+          "portfolio": {
+            "total_value": 569787.55,
+            "equity": 569787.55,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-26": {
+          "portfolio": {
+            "total_value": 569787.55,
+            "equity": 569787.55,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-27": {
+          "portfolio": {
+            "total_value": 573154.19,
+            "equity": 573154.19,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-28": {
+          "portfolio": {
+            "total_value": 575764.88,
+            "equity": 575764.88,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-29": {
+          "portfolio": {
+            "total_value": 583784.06,
+            "equity": 583784.06,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-30": {
+          "portfolio": {
+            "total_value": 585200.0,
+            "equity": 585200.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-01-31": {
+          "portfolio": {
+            "total_value": 585200.0,
+            "equity": 585200.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-01": {
+          "portfolio": {
+            "total_value": 585200.0,
+            "equity": 585200.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-02": {
+          "portfolio": {
+            "total_value": 585200.0,
+            "equity": 585200.0,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-03": {
+          "portfolio": {
+            "total_value": 588708.56,
+            "equity": 588708.56,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-04": {
+          "portfolio": {
+            "total_value": 584387.21,
+            "equity": 584387.21,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-05": {
+          "portfolio": {
+            "total_value": 595236.79,
+            "equity": 595236.79,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-06": {
+          "portfolio": {
+            "total_value": 602347.27,
+            "equity": 602347.27,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-07": {
+          "portfolio": {
+            "total_value": 602347.27,
+            "equity": 602347.27,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-08": {
+          "portfolio": {
+            "total_value": 602347.27,
+            "equity": 602347.27,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-09": {
+          "portfolio": {
+            "total_value": 615884.57,
+            "equity": 615884.57,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-10": {
+          "portfolio": {
+            "total_value": 620924.16,
+            "equity": 620924.16,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-11": {
+          "portfolio": {
+            "total_value": 624877.5,
+            "equity": 624877.5,
+            "mutual_fund": 0.0
+          }
+        },
+        "2026-02-12": {
+          "portfolio": {
+            "total_value": 631777.55,
+            "equity": 631777.55,
+            "mutual_fund": 0.0
+          }
+        }
+      }
+    }
+  },
+  "allocation_plans": [
+    {
+      "name": "Target 2026",
+      "description": "Target allocation for calendar year 2026",
+      "is_primary": true,
+      "targets": [
+        {
+          "tag": "Large Cap",
+          "target_pct": 40.0,
+          "notes": "Core stability"
+        },
+        {
+          "tag": "Mid Cap",
+          "target_pct": 15.0,
+          "notes": "Growth engine"
+        },
+        {
+          "tag": "Small Cap",
+          "target_pct": 5.0,
+          "notes": "High risk, high reward"
+        },
+        {
+          "tag": "Bank FD",
+          "target_pct": 40.0,
+          "notes": "Capital preservation"
+        }
+      ]
+    },
+    {
+      "name": "Aggressive Growth",
+      "description": "Higher equity tilt for market upswing periods",
+      "is_primary": false,
+      "targets": [
+        {
+          "tag": "Large Cap",
+          "target_pct": 45.0,
+          "notes": "Still core"
+        },
+        {
+          "tag": "Mid Cap",
+          "target_pct": 25.0,
+          "notes": "Overweight mid caps"
+        },
+        {
+          "tag": "Small Cap",
+          "target_pct": 10.0,
+          "notes": "Increased small cap"
+        },
+        {
+          "tag": "Bank FD",
+          "target_pct": 20.0,
+          "notes": "Reduced fixed income"
+        }
+      ]
+    }
+  ],
+  "rebalancing_operations": [
+    {
+      "name": "Q3 2025 Rebalance",
+      "date": "2025-08-05",
+      "notes": "Exited underperforming IT, shifted to quality names",
+      "status": "executed",
+      "moves": [
+        {
+          "action": "sell",
+          "investment": "WIPRO",
+          "amount": 24250.0
+        },
+        {
+          "action": "buy",
+          "investment": "TCS",
+          "amount": 18950.0
+        },
+        {
+          "action": "buy",
+          "investment": "PERSISTENT",
+          "amount": 5300.0
+        }
+      ]
+    },
+    {
+      "name": "Q4 2025 Profit Booking",
+      "date": "2025-10-20",
+      "notes": "Partial profit booking in telecom, redeployed to FD",
+      "status": "executed",
+      "moves": [
+        {
+          "action": "sell",
+          "investment": "BHARTIARTL",
+          "amount": 16800.0
+        },
+        {
+          "action": "buy",
+          "investment": "Bajaj Finance FD",
+          "amount": 16800.0
+        }
+      ]
+    }
+  ]
+}
