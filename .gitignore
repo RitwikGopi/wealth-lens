@@ -29,7 +29,6 @@ venv/
 *.cert
 
 # Claude Code
-CLAUDE.md
 .claude/
 .team-memory/
 
