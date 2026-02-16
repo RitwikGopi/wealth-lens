@@ -10,10 +10,20 @@ _scheduler: BackgroundScheduler | None = None
 
 
 def _take_daily_snapshot():
-    from app.services import portfolio_service
+    from app.services import portfolio_service, zerodha_service
 
     db = SessionLocal()
     try:
+        # Sync holdings from Zerodha first to get latest prices
+        config = zerodha_service.get_config(db)
+        if config and config.access_token:
+            try:
+                eq = zerodha_service.sync_holdings(db, config)
+                mf = zerodha_service.sync_mf_holdings(db, config)
+                logger.info("Pre-snapshot sync: %d equity, %d MF holdings synced", eq, mf)
+            except Exception:
+                logger.exception("Pre-snapshot Zerodha sync failed, continuing with snapshot")
+
         snapshot = portfolio_service.take_snapshot(db)
         logger.info("Daily snapshot taken: date=%s total_value=%.2f", snapshot.date, snapshot.total_value)
     except Exception:

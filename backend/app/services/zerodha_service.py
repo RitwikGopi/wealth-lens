@@ -1,7 +1,10 @@
+import logging
 from datetime import date
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+
+logger = logging.getLogger(__name__)
 
 from app.models.holding import Holding
 from app.models.transaction import Transaction
@@ -64,9 +67,13 @@ def sync_holdings(db: Session, config: ZerodhaConfig) -> int:
         kite.set_access_token(config.access_token)
         kite_holdings = kite.holdings()
     except ImportError:
+        logger.error("kiteconnect not installed, skipping equity sync")
         return 0
-    except Exception:
+    except Exception as e:
+        logger.error("Failed to fetch holdings from Zerodha: %s", e)
         return 0
+
+    logger.info("Fetched %d equity holdings from Zerodha", len(kite_holdings))
 
     count = 0
     total_buys = 0.0
@@ -82,13 +89,26 @@ def sync_holdings(db: Session, config: ZerodhaConfig) -> int:
 
         if existing:
             old_quantity = existing.quantity
+            old_price = existing.current_price
+            old_avg = existing.average_price
             existing.quantity = h.get("quantity", existing.quantity)
             existing.average_price = h.get("average_price", existing.average_price)
             existing.current_price = h.get("last_price", existing.current_price)
+            logger.info(
+                "UPDATE %s: qty %s->%s, avg_price %s->%s, current_price %s->%s",
+                h["tradingsymbol"],
+                old_quantity, existing.quantity,
+                old_avg, existing.average_price,
+                old_price, existing.current_price,
+            )
             if existing.current_price and existing.quantity:
                 existing.current_value = existing.quantity * existing.current_price
                 existing.pnl = existing.current_value - (
                     existing.quantity * existing.average_price
+                )
+                logger.info(
+                    "  -> current_value=%.2f, pnl=%.2f",
+                    existing.current_value, existing.pnl,
                 )
 
             qty_diff = existing.quantity - old_quantity
@@ -124,6 +144,11 @@ def sync_holdings(db: Session, config: ZerodhaConfig) -> int:
                 )
                 db.add(txn)
         else:
+            logger.info(
+                "NEW %s: qty=%s, avg_price=%s, current_price=%s",
+                h.get("tradingsymbol"),
+                h.get("quantity"), h.get("average_price"), h.get("last_price"),
+            )
             holding = Holding(
                 symbol=h.get("tradingsymbol", ""),
                 exchange=h.get("exchange", "NSE"),
@@ -160,6 +185,10 @@ def sync_holdings(db: Session, config: ZerodhaConfig) -> int:
 
     # Create a deposit transaction for net inflow (buys minus sells)
     net_inflow = total_buys - total_sells
+    logger.info(
+        "Equity sync complete: %d holdings, total_buys=%.2f, total_sells=%.2f, net_inflow=%.2f",
+        count, total_buys, total_sells, net_inflow,
+    )
     if net_inflow > 0:
         deposit_txn = Transaction(
             type="deposit",
@@ -183,9 +212,13 @@ def sync_mf_holdings(db: Session, config: ZerodhaConfig) -> int:
         kite.set_access_token(config.access_token)
         kite_mf_holdings = kite.mf_holdings()
     except ImportError:
+        logger.error("kiteconnect not installed, skipping MF sync")
         return 0
-    except Exception:
+    except Exception as e:
+        logger.error("Failed to fetch MF holdings from Zerodha: %s", e)
         return 0
+
+    logger.info("Fetched %d MF holdings from Zerodha", len(kite_mf_holdings))
 
     count = 0
     total_buys = 0.0
@@ -201,13 +234,26 @@ def sync_mf_holdings(db: Session, config: ZerodhaConfig) -> int:
 
         if existing:
             old_quantity = existing.quantity
+            old_price = existing.current_price
+            old_avg = existing.average_price
             existing.quantity = h.get("quantity", existing.quantity)
             existing.average_price = h.get("average_price", existing.average_price)
             existing.current_price = h.get("last_price", existing.current_price)
+            logger.info(
+                "UPDATE MF %s: qty %s->%s, avg_price %s->%s, current_price %s->%s",
+                h["tradingsymbol"],
+                old_quantity, existing.quantity,
+                old_avg, existing.average_price,
+                old_price, existing.current_price,
+            )
             if existing.current_price and existing.quantity:
                 existing.current_value = existing.quantity * existing.current_price
                 existing.pnl = existing.current_value - (
                     existing.quantity * existing.average_price
+                )
+                logger.info(
+                    "  -> current_value=%.2f, pnl=%.2f",
+                    existing.current_value, existing.pnl,
                 )
 
             qty_diff = existing.quantity - old_quantity
@@ -243,6 +289,11 @@ def sync_mf_holdings(db: Session, config: ZerodhaConfig) -> int:
                 )
                 db.add(txn)
         else:
+            logger.info(
+                "NEW MF %s: qty=%s, avg_price=%s, current_price=%s",
+                h.get("tradingsymbol"),
+                h.get("quantity"), h.get("average_price"), h.get("last_price"),
+            )
             holding = Holding(
                 symbol=h.get("fund", ""),
                 exchange="MF",
@@ -279,6 +330,10 @@ def sync_mf_holdings(db: Session, config: ZerodhaConfig) -> int:
 
     # Create a deposit transaction for net inflow (buys minus sells)
     net_inflow = total_buys - total_sells
+    logger.info(
+        "MF sync complete: %d holdings, total_buys=%.2f, total_sells=%.2f, net_inflow=%.2f",
+        count, total_buys, total_sells, net_inflow,
+    )
     if net_inflow > 0:
         deposit_txn = Transaction(
             type="deposit",
@@ -298,7 +353,11 @@ def fetch_prices(db: Session, config: ZerodhaConfig) -> int:
 
         kite = KiteConnect(api_key=config.api_key)
         kite.set_access_token(config.access_token)
-    except (ImportError, Exception):
+    except ImportError:
+        logger.error("kiteconnect not installed, skipping price fetch")
+        return 0
+    except Exception as e:
+        logger.error("Failed to init Kite for price fetch: %s", e)
         return 0
 
     holdings = list(
@@ -308,6 +367,7 @@ def fetch_prices(db: Session, config: ZerodhaConfig) -> int:
     )
 
     if not holdings:
+        logger.info("No zerodha holdings found, skipping price fetch")
         return 0
 
     instruments = []
@@ -318,20 +378,30 @@ def fetch_prices(db: Session, config: ZerodhaConfig) -> int:
     if not instruments:
         return 0
 
+    logger.info("Fetching prices for %d instruments", len(instruments))
+
     try:
         quotes = kite.quote(instruments)
-    except Exception:
+    except Exception as e:
+        logger.error("Failed to fetch quotes: %s", e)
         return 0
 
     count = 0
     for h in holdings:
         key = f"{h.exchange}:{h.zerodha_trading_symbol}"
         if key in quotes:
+            old_price = h.current_price
             h.current_price = quotes[key].get("last_price", h.current_price)
             if h.current_price and h.quantity:
                 h.current_value = h.quantity * h.current_price
                 h.pnl = h.current_value - (h.quantity * h.average_price)
+            logger.info(
+                "PRICE %s: %s -> %s (value=%.2f, pnl=%.2f)",
+                h.symbol, old_price, h.current_price,
+                h.current_value or 0, h.pnl or 0,
+            )
             count += 1
 
+    logger.info("Price fetch complete: updated %d holdings", count)
     db.commit()
     return count
