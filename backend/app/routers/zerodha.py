@@ -83,14 +83,22 @@ def handle_callback(
 
 @router.post("/sync", response_model=ZerodhaSyncResponse)
 def sync_holdings(db: Session = Depends(get_db)):
+    from kiteconnect import exceptions as kite_exceptions
+
     config = zerodha_service.get_config(db)
     if not config or not config.access_token:
         raise HTTPException(
             status_code=400,
             detail="Zerodha not connected. Complete authentication first.",
         )
-    count = zerodha_service.sync_holdings(db, config)
-    mf_count = zerodha_service.sync_mf_holdings(db, config)
+    try:
+        count = zerodha_service.sync_holdings(db, config)
+        mf_count = zerodha_service.sync_mf_holdings(db, config)
+    except kite_exceptions.TokenException:
+        raise HTTPException(
+            status_code=401,
+            detail="Zerodha session expired. Please re-authenticate.",
+        )
     portfolio_service.take_snapshot(db)
     return ZerodhaSyncResponse(
         synced_count=count + mf_count,

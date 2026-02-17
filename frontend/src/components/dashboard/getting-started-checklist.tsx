@@ -147,10 +147,16 @@ export function GettingStartedChecklist({
       toast.success(result.message);
       onSyncComplete?.();
       await fetchStatus();
-    } catch {
-      toast.error(
-        "Failed to sync. Check Zerodha connection in Settings."
-      );
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Failed to sync. Check Zerodha connection in Settings.";
+      if (message.toLowerCase().includes("session expired")) {
+        toast.error(message, {
+          action: { label: "Authenticate", onClick: () => window.location.href = "/settings" },
+          duration: 8000,
+        });
+      } else {
+        toast.error(message);
+      }
     } finally {
       setSyncing(false);
     }

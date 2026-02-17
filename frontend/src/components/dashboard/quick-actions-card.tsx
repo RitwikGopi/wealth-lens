@@ -18,7 +18,15 @@ export function QuickActionsCard({ onSyncComplete }: { onSyncComplete?: () => vo
       toast.success(result.message);
       onSyncComplete?.();
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Failed to sync. Check Zerodha connection in Settings.");
+      const message = err instanceof Error ? err.message : "Failed to sync. Check Zerodha connection in Settings.";
+      if (message.toLowerCase().includes("session expired")) {
+        toast.error(message, {
+          action: { label: "Authenticate", onClick: () => window.location.href = "/settings" },
+          duration: 8000,
+        });
+      } else {
+        toast.error(message);
+      }
     } finally {
       setSyncing(false);
     }

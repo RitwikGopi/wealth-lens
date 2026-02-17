@@ -62,6 +62,7 @@ def sync_holdings(db: Session, config: ZerodhaConfig) -> int:
 
     try:
         from kiteconnect import KiteConnect
+        from kiteconnect import exceptions as kite_exceptions
 
         kite = KiteConnect(api_key=config.api_key)
         kite.set_access_token(config.access_token)
@@ -69,6 +70,8 @@ def sync_holdings(db: Session, config: ZerodhaConfig) -> int:
     except ImportError:
         logger.error("kiteconnect not installed, skipping equity sync")
         return 0
+    except kite_exceptions.TokenException:
+        raise
     except Exception as e:
         logger.error("Failed to fetch holdings from Zerodha: %s", e)
         return 0
@@ -207,6 +210,7 @@ def sync_holdings(db: Session, config: ZerodhaConfig) -> int:
 def sync_mf_holdings(db: Session, config: ZerodhaConfig) -> int:
     try:
         from kiteconnect import KiteConnect
+        from kiteconnect import exceptions as kite_exceptions
 
         kite = KiteConnect(api_key=config.api_key)
         kite.set_access_token(config.access_token)
@@ -214,6 +218,8 @@ def sync_mf_holdings(db: Session, config: ZerodhaConfig) -> int:
     except ImportError:
         logger.error("kiteconnect not installed, skipping MF sync")
         return 0
+    except kite_exceptions.TokenException:
+        raise
     except Exception as e:
         logger.error("Failed to fetch MF holdings from Zerodha: %s", e)
         return 0

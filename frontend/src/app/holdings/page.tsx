@@ -76,8 +76,16 @@ export default function HoldingsPage() {
       await api.post("/zerodha/sync");
       await fetchHoldings();
       toast.success("Holdings synced successfully");
-    } catch {
-      toast.error("Failed to sync holdings. Check your Zerodha connection.");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Failed to sync holdings. Check your Zerodha connection.";
+      if (message.toLowerCase().includes("session expired")) {
+        toast.error(message, {
+          action: { label: "Authenticate", onClick: () => window.location.href = "/settings" },
+          duration: 8000,
+        });
+      } else {
+        toast.error(message);
+      }
     } finally {
       setSyncing(false);
     }
