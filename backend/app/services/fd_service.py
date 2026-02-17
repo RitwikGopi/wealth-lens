@@ -53,15 +53,16 @@ def create_fixed_deposit(db: Session, data: FixedDepositCreate) -> FixedDeposit:
     db.add(fd)
     db.flush()
 
-    deposit_txn = Transaction(
-        type="deposit",
-        fd_id=fd.id,
-        amount=fd.principal,
-        date=fd.start_date,
-        source="auto_fd",
-        notes=f"Deposit for FD at {fd.bank_name}",
-    )
-    db.add(deposit_txn)
+    if data.funded_externally:
+        deposit_txn = Transaction(
+            type="deposit",
+            fd_id=fd.id,
+            amount=fd.principal,
+            date=fd.start_date,
+            source="auto_fd",
+            notes=f"Deposit for FD at {fd.bank_name}",
+        )
+        db.add(deposit_txn)
     db.commit()
     db.refresh(fd)
     return fd
@@ -114,6 +115,7 @@ def close_fixed_deposit(
     closure_date: date,
     closure_amount: float,
     premature: bool = False,
+    reinvesting: bool = False,
     notes: str | None = None,
     commit: bool = True,
 ) -> FixedDeposit:
@@ -127,21 +129,22 @@ def close_fixed_deposit(
     fd.closure_amount = closure_amount
     fd.current_value = closure_amount
 
-    withdrawal_notes = (
-        f"{'Premature closure' if premature else 'Maturity closure'} of FD at {fd.bank_name}"
-    )
-    if notes:
-        withdrawal_notes += f" - {notes}"
+    if not reinvesting:
+        withdrawal_notes = (
+            f"{'Premature closure' if premature else 'Maturity closure'} of FD at {fd.bank_name}"
+        )
+        if notes:
+            withdrawal_notes += f" - {notes}"
 
-    withdrawal_txn = Transaction(
-        type="withdrawal",
-        fd_id=fd.id,
-        amount=closure_amount,
-        date=closure_date,
-        source="auto_fd",
-        notes=withdrawal_notes,
-    )
-    db.add(withdrawal_txn)
+        withdrawal_txn = Transaction(
+            type="withdrawal",
+            fd_id=fd.id,
+            amount=closure_amount,
+            date=closure_date,
+            source="auto_fd",
+            notes=withdrawal_notes,
+        )
+        db.add(withdrawal_txn)
 
     if commit:
         db.commit()
@@ -187,7 +190,7 @@ def renew_fixed_deposit(
     if notes:
         renewal_notes += f" - {notes}"
     close_fixed_deposit(
-        db, fd, closure_date, closure_amount, notes=renewal_notes, commit=False
+        db, fd, closure_date, closure_amount, reinvesting=True, notes=renewal_notes, commit=False
     )
 
     # Determine new FD terms (defaults from old FD)
@@ -212,6 +215,7 @@ def renew_fixed_deposit(
         start_date=closure_date,
         maturity_date=new_maturity_date,
         is_cumulative=actual_cumulative,
+        funded_externally=False,
         notes=f"Renewed from FD #{fd.id}",
     )
     new_fd = create_fixed_deposit(db, new_fd_data)

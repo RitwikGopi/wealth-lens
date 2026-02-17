@@ -136,8 +136,8 @@ function UnrealizedPnlBreakdown({ data }: { data: LifetimeGains }) {
       <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
         Unrealized P&L Breakdown
       </p>
-      <Row label="Holdings P&L" value={data.holdings_pnl} sign="+" colored />
-      <Row label="FD Interest" value={data.fd_interest} sign="+" colored />
+      <Row label="Holdings P&L" value={data.holdings_pnl} colored />
+      <Row label="FD Interest" value={data.fd_interest} colored />
       <div className="border-t my-1.5" />
       <div className="flex justify-between font-semibold">
         <span>= Total Unrealized</span>
@@ -177,9 +177,9 @@ function LifetimeGainBreakdown({ data }: { data: LifetimeGains }) {
         <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
           Breakdown
         </p>
-        <Row label="Holdings P&L" value={data.holdings_pnl} sign="+" colored />
-        <Row label="FD Interest" value={data.fd_interest} sign="+" colored />
-        <Row label="Realized P&L" value={data.realized_pnl} sign="+" colored />
+        <Row label="Holdings P&L" value={data.holdings_pnl} colored />
+        <Row label="FD Interest" value={data.fd_interest} colored />
+        <Row label="Realized P&L" value={data.realized_pnl} colored />
       </div>
     </div>
   );
@@ -200,7 +200,9 @@ function Row({
     ? `− ${formatINR(Math.abs(value))}`
     : sign === "+"
       ? `+ ${formatINR(Math.abs(value))}`
-      : formatINR(value);
+      : colored && !sign
+        ? formatINR(value, { showSign: true })
+        : formatINR(value);
 
   return (
     <div className="flex justify-between">

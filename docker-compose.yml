@@ -1,15 +1,31 @@
 services:
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      - SITE_HOSTNAME=ritwiks-macbook-air.local
+    depends_on:
+      - frontend
+      - backend
+
   backend:
     build: ./backend
     ports:
       - "8998:8998"
     volumes:
-      - ./data:/app/data
+      - ./backend/portfolio.db:/app/data/portfolio.db
     env_file:
       - ./backend/.env
     environment:
       - DATABASE_URL=sqlite:///./data/portfolio.db
       - CORS_ORIGINS=*
+      - FRONTEND_URL=https://ritwiks-macbook-air.local
 
   frontend:
     build: ./frontend
@@ -17,3 +33,7 @@ services:
       - "3333:3000"
     depends_on:
       - backend
+
+volumes:
+  caddy_data:
+  caddy_config:

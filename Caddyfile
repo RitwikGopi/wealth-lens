@@ -1,0 +1,8 @@
+{$SITE_HOSTNAME:localhost} {
+	handle /api/* {
+		reverse_proxy backend:8998
+	}
+	handle {
+		reverse_proxy frontend:3000
+	}
+}

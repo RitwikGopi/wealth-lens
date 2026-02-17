@@ -33,6 +33,7 @@ export function FDCloseDialog({ open, onOpenChange, fd, onClosed }: FDCloseDialo
   const [closureDate, setClosureDate] = useState(maturityPassed ? fd.maturity_date : today);
   const [closureAmount, setClosureAmount] = useState(fd.current_value || fd.principal);
   const [premature, setPremature] = useState(!maturityPassed);
+  const [reinvesting, setReinvesting] = useState(false);
   const [notes, setNotes] = useState("");
 
   useEffect(() => {
@@ -41,6 +42,7 @@ export function FDCloseDialog({ open, onOpenChange, fd, onClosed }: FDCloseDialo
       setClosureDate(matPassed ? fd.maturity_date : today);
       setClosureAmount(fd.current_value || fd.principal);
       setPremature(!matPassed);
+      setReinvesting(false);
       setNotes("");
     }
   }, [open, fd, today]);
@@ -64,6 +66,7 @@ export function FDCloseDialog({ open, onOpenChange, fd, onClosed }: FDCloseDialo
         closure_date: closureDate,
         closure_amount: closureAmount,
         premature,
+        reinvesting,
         notes: notes || undefined,
       };
       const closedFd = await api.post<FixedDepositResponse>(
@@ -127,6 +130,17 @@ export function FDCloseDialog({ open, onOpenChange, fd, onClosed }: FDCloseDialo
               onCheckedChange={(checked) => setPremature(checked === true)}
             />
             <Label htmlFor="premature">Premature withdrawal (before maturity)</Label>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Checkbox
+              id="reinvesting"
+              checked={reinvesting}
+              onCheckedChange={(checked) => setReinvesting(checked === true)}
+            />
+            <Label htmlFor="reinvesting" className="text-sm">
+              Reinvesting into portfolio (e.g. buying stocks)
+            </Label>
           </div>
 
           <div className="space-y-2">

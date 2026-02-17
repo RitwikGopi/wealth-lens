@@ -164,6 +164,11 @@ export default function FDDetailPage() {
               {fd.auto_renew && (
                 <span className="text-xs text-gray-500">Auto-Renewal On</span>
               )}
+              {!fd.funded_externally && (
+                <span className="rounded-full bg-blue-50 px-2 py-0.5 text-xs text-blue-600">
+                  Funded from portfolio
+                </span>
+              )}
             </div>
           </div>
           <div className="flex flex-wrap gap-2">

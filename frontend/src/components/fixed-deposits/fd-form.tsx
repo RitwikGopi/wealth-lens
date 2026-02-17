@@ -40,6 +40,7 @@ const emptyForm: FixedDepositCreate = {
   maturity_date: "",
   is_cumulative: true,
   auto_renew: false,
+  funded_externally: true,
   notes: "",
 };
 
@@ -190,6 +191,21 @@ export function FDForm({ open, onOpenChange, onSubmit, initialData, mode = "add"
               <Label htmlFor="auto_renew">Auto-Renewal</Label>
             </div>
           </div>
+
+          {mode === "add" && (
+            <div className="flex items-center gap-2">
+              <Checkbox
+                id="funded_from_portfolio"
+                checked={form.funded_externally === false}
+                onCheckedChange={(checked) =>
+                  setForm({ ...form, funded_externally: checked !== true })
+                }
+              />
+              <Label htmlFor="funded_from_portfolio" className="text-sm">
+                Funded from existing portfolio (e.g. stock sale proceeds)
+              </Label>
+            </div>
+          )}
 
           <div className="space-y-2">
             <Label htmlFor="notes">Notes</Label>

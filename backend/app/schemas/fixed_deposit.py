@@ -18,7 +18,7 @@ class FixedDepositBase(BaseModel):
 
 
 class FixedDepositCreate(FixedDepositBase):
-    pass
+    funded_externally: bool = True
 
 
 class FixedDepositUpdate(BaseModel):
@@ -67,6 +67,7 @@ class FDCloseRequest(BaseModel):
     closure_date: date
     closure_amount: float
     premature: bool = False
+    reinvesting: bool = False
     notes: str | None = None
 
 

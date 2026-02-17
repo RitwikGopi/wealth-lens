@@ -82,6 +82,7 @@ def close_fixed_deposit(fd_id: int, data: FDCloseRequest, db: Session = Depends(
             closure_date=data.closure_date,
             closure_amount=data.closure_amount,
             premature=data.premature,
+            reinvesting=data.reinvesting,
             notes=data.notes,
         )
     except ValueError as e:

@@ -12,6 +12,7 @@ export interface FixedDepositResponse {
   is_cumulative: boolean;
   interest_payout_freq: string | null;
   auto_renew: boolean;
+  funded_externally: boolean;
   notes: string | null;
   status: "active" | "closed";
   closure_date: string | null;
@@ -42,6 +43,7 @@ export interface FixedDepositCreate {
   is_cumulative?: boolean;
   interest_payout_freq?: string;
   auto_renew?: boolean;
+  funded_externally?: boolean;
   notes?: string;
 }
 
@@ -79,6 +81,7 @@ export interface FDCloseRequest {
   closure_date: string;
   closure_amount: number;
   premature: boolean;
+  reinvesting?: boolean;
   notes?: string;
 }
 

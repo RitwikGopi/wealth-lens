@@ -23,6 +23,9 @@ class FixedDeposit(Base):
     is_cumulative: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
     interest_payout_freq: Mapped[str | None] = mapped_column(String, nullable=True)
     auto_renew: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    funded_externally: Mapped[bool] = mapped_column(
+        Boolean, nullable=False, server_default="1"
+    )
     notes: Mapped[str | None] = mapped_column(Text, nullable=True)
     status: Mapped[str] = mapped_column(
         String, nullable=False, server_default="active"
