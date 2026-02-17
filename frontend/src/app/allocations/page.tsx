@@ -271,7 +271,7 @@ export default function AllocationsPage() {
             {alloc.drift_pct.toFixed(1)}pp
           </span>
         </TableCell>
-        <TableCell className="text-right">
+        <TableCell className="hidden text-right md:table-cell">
           <CurrencyDisplay value={alloc.drift_value} showSign colored />
         </TableCell>
       </TableRow>
@@ -281,16 +281,16 @@ export default function AllocationsPage() {
   return (
     <div className="space-y-6">
       {/* Header with plan selector */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <h1 className="text-2xl font-bold text-gray-900">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+          <h1 className="text-xl font-bold text-gray-900 md:text-2xl">
             Allocation Planning
           </h1>
           <Select
             value={selectedPlanId?.toString() ?? ""}
             onValueChange={handlePlanChange}
           >
-            <SelectTrigger className="w-[200px]">
+            <SelectTrigger className="w-full sm:w-[200px]">
               <SelectValue placeholder="Select plan" />
             </SelectTrigger>
             <SelectContent>
@@ -308,7 +308,7 @@ export default function AllocationsPage() {
           </Select>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap gap-2">
           <Button
             variant="outline"
             size="sm"
@@ -431,7 +431,7 @@ export default function AllocationsPage() {
                       <LabelList
                         dataKey="target"
                         position="right"
-                        formatter={(v: number) => `${v.toFixed(1)}%`}
+                        formatter={(v: unknown) => `${Number(v).toFixed(1)}%`}
                         style={{ fontSize: 11, fill: "#6B7280" }}
                       />
                     </Bar>
@@ -447,7 +447,7 @@ export default function AllocationsPage() {
                       <LabelList
                         dataKey="actual"
                         position="right"
-                        formatter={(v: number) => `${v.toFixed(1)}%`}
+                        formatter={(v: unknown) => `${Number(v).toFixed(1)}%`}
                         style={{ fontSize: 11, fill: "#374151" }}
                       />
                     </Bar>
@@ -467,7 +467,7 @@ export default function AllocationsPage() {
                     <TableHead className="text-right">Target %</TableHead>
                     <TableHead className="text-right">Actual %</TableHead>
                     <TableHead className="text-right">Drift</TableHead>
-                    <TableHead className="text-right">Drift (INR)</TableHead>
+                    <TableHead className="hidden text-right md:table-cell">Drift (INR)</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -498,7 +498,7 @@ export default function AllocationsPage() {
                       )}
                     </TableCell>
                     <TableCell />
-                    <TableCell />
+                    <TableCell className="hidden md:table-cell" />
                   </TableRow>
                 </TableBody>
               </Table>
@@ -824,7 +824,7 @@ function EditTargetsDialog({
                 className="w-20 font-mono"
               />
               <span className="text-sm text-gray-500">%</span>
-              <div className="flex-1">
+              <div className="hidden flex-1 sm:block">
                 <Slider
                   value={[targets[alloc.tag_id] ?? 0]}
                   onValueChange={([val]) =>
@@ -966,7 +966,7 @@ function CreateTargetsDialog({
                   className="w-20 font-mono"
                 />
                 <span className="text-sm text-gray-500">%</span>
-                <div className="flex-1">
+                <div className="hidden flex-1 sm:block">
                   <Slider
                     value={[targets[tag.id] ?? 0]}
                     onValueChange={([val]) =>

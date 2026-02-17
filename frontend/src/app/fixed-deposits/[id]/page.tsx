@@ -146,7 +146,7 @@ export default function FDDetailPage() {
 
       {/* FD Info Card */}
       <Card>
-        <CardHeader className="flex flex-row items-center justify-between">
+        <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <CardTitle className="text-xl">
               {fd.bank_name}
@@ -166,7 +166,7 @@ export default function FDDetailPage() {
               )}
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {!isClosed && (
               <>
                 <Button variant="outline" size="sm" onClick={() => setCloseOpen(true)}>

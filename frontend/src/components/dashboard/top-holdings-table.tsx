@@ -34,17 +34,17 @@ export function TopHoldingsTable({ holdings }: TopHoldingsTableProps) {
           <TableHeader>
             <TableRow>
               <TableHead>Symbol</TableHead>
-              <TableHead>Type</TableHead>
+              <TableHead className="hidden md:table-cell">Type</TableHead>
               <TableHead className="text-right">Value</TableHead>
               <TableHead className="text-right">P&L %</TableHead>
-              <TableHead>Tags</TableHead>
+              <TableHead className="hidden md:table-cell">Tags</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {holdings.map((holding) => (
               <TableRow key={holding.id}>
                 <TableCell className="font-medium">{holding.symbol}</TableCell>
-                <TableCell className="text-gray-500">
+                <TableCell className="hidden text-gray-500 md:table-cell">
                   {holding.instrument_type}
                 </TableCell>
                 <TableCell className="text-right">
@@ -62,7 +62,7 @@ export function TopHoldingsTable({ holdings }: TopHoldingsTableProps) {
                     {formatPercent(holding.pnl_percentage, { showSign: true })}
                   </span>
                 </TableCell>
-                <TableCell>
+                <TableCell className="hidden md:table-cell">
                   <div className="flex gap-1">
                     {holding.tags.map((tag) => (
                       <TagBadge

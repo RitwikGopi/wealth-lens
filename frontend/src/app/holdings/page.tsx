@@ -150,9 +150,9 @@ export default function HoldingsPage() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">Holdings</h1>
-        <div className="flex items-center gap-2">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <h1 className="text-xl font-bold text-gray-900 md:text-2xl">Holdings</h1>
+        <div className="flex flex-wrap gap-2">
           <Button onClick={() => setShowAddForm(true)}>
             <Plus className="mr-2 h-4 w-4" />
             Add Holding
@@ -167,7 +167,7 @@ export default function HoldingsPage() {
       {/* Filters */}
       <div className="flex flex-wrap items-center gap-3">
         <Select value={sourceFilter} onValueChange={setSourceFilter}>
-          <SelectTrigger className="w-[140px]">
+          <SelectTrigger className="w-full sm:w-[140px]">
             <SelectValue placeholder="Source" />
           </SelectTrigger>
           <SelectContent>
@@ -178,7 +178,7 @@ export default function HoldingsPage() {
         </Select>
 
         <Select value={typeFilter} onValueChange={setTypeFilter}>
-          <SelectTrigger className="w-[140px]">
+          <SelectTrigger className="w-full sm:w-[140px]">
             <SelectValue placeholder="Type" />
           </SelectTrigger>
           <SelectContent>
@@ -195,7 +195,7 @@ export default function HoldingsPage() {
           placeholder="Search by symbol..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-[200px]"
+          className="w-full sm:w-[200px]"
         />
       </div>
 
@@ -232,15 +232,15 @@ export default function HoldingsPage() {
                     />
                   </TableHead>
                   <TableHead>Symbol</TableHead>
-                  <TableHead>Exchange</TableHead>
+                  <TableHead className="hidden md:table-cell">Exchange</TableHead>
                   <TableHead>Type</TableHead>
                   <TableHead className="text-right">Qty</TableHead>
-                  <TableHead className="text-right">Avg Price</TableHead>
-                  <TableHead className="text-right">Current Price</TableHead>
+                  <TableHead className="hidden md:table-cell text-right">Avg Price</TableHead>
+                  <TableHead className="hidden md:table-cell text-right">Current Price</TableHead>
                   <TableHead className="text-right">Value</TableHead>
                   <TableHead className="text-right">P&L</TableHead>
                   <TableHead className="text-right">P&L %</TableHead>
-                  <TableHead>Source</TableHead>
+                  <TableHead className="hidden md:table-cell">Source</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -267,7 +267,7 @@ export default function HoldingsPage() {
                           {holding.symbol}
                         </Link>
                       </TableCell>
-                      <TableCell className="text-gray-500">
+                      <TableCell className="hidden text-gray-500 md:table-cell">
                         {holding.exchange}
                       </TableCell>
                       <TableCell className="text-gray-500">
@@ -276,10 +276,10 @@ export default function HoldingsPage() {
                       <TableCell className="text-right font-mono tabular-nums">
                         {holding.quantity}
                       </TableCell>
-                      <TableCell className="text-right">
+                      <TableCell className="hidden text-right md:table-cell">
                         <CurrencyDisplay value={holding.average_price} />
                       </TableCell>
-                      <TableCell className="text-right">
+                      <TableCell className="hidden text-right md:table-cell">
                         <CurrencyDisplay
                           value={holding.current_price || 0}
                         />
@@ -308,7 +308,7 @@ export default function HoldingsPage() {
                           {formatPercent(pnlPct, { showSign: true })}
                         </span>
                       </TableCell>
-                      <TableCell className="text-gray-500 capitalize">
+                      <TableCell className="hidden text-gray-500 capitalize md:table-cell">
                         {holding.source}
                       </TableCell>
                     </TableRow>
@@ -322,7 +322,7 @@ export default function HoldingsPage() {
 
       {/* Floating Bulk Action Bar */}
       {selectedIds.size > 0 && (
-        <div className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-3 rounded-lg border bg-white px-4 py-3 shadow-lg">
+        <div className="fixed bottom-6 left-4 right-4 z-50 flex items-center gap-3 rounded-lg border bg-white px-4 py-3 shadow-lg md:left-1/2 md:right-auto md:-translate-x-1/2">
           <span className="text-sm font-medium text-gray-700">
             {selectedIds.size} selected
           </span>

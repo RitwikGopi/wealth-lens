@@ -48,7 +48,7 @@ export function RecentTransactionsTable({
               <TableHead>Date</TableHead>
               <TableHead>Type</TableHead>
               <TableHead className="text-right">Amount</TableHead>
-              <TableHead>Description</TableHead>
+              <TableHead className="hidden md:table-cell">Description</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -65,7 +65,7 @@ export function RecentTransactionsTable({
                 <TableCell className="text-right">
                   <CurrencyDisplay value={txn.amount} />
                 </TableCell>
-                <TableCell className="text-gray-500">
+                <TableCell className="hidden text-gray-500 md:table-cell">
                   {txn.notes || "--"}
                 </TableCell>
               </TableRow>

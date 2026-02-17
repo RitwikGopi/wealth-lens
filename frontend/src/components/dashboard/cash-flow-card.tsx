@@ -49,9 +49,9 @@ export function CashFlowCard({ data }: CashFlowCardProps) {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center gap-2">
+        <div className="grid grid-cols-2 gap-3 sm:flex sm:items-center sm:gap-2">
           {items.map((item, idx) => (
-            <div key={item.label} className="flex items-center gap-2" style={{ flex: Math.max(Math.abs(item.value) / maxVal, 0.15) }}>
+            <div key={item.label} className="flex items-center gap-2 sm:flex-1" style={{ flex: undefined }}>
               <div className="min-w-0 flex-1">
                 <p className="truncate text-xs text-gray-500">{item.label}</p>
                 <div
@@ -70,14 +70,14 @@ export function CashFlowCard({ data }: CashFlowCardProps) {
                 </div>
               </div>
               {idx < items.length - 1 && (
-                <ArrowRight className="h-4 w-4 shrink-0 text-gray-300" />
+                <ArrowRight className="hidden h-4 w-4 shrink-0 text-gray-300 sm:block" />
               )}
             </div>
           ))}
         </div>
 
         {/* Secondary breakdown */}
-        <div className="mt-3 flex items-center gap-4 border-t pt-3 text-xs text-gray-500">
+        <div className="mt-3 flex flex-col gap-1 border-t pt-3 text-xs text-gray-500 sm:flex-row sm:items-center sm:gap-4">
           <span>
             Unrealized P&L:{" "}
             <span className={cn("font-mono font-semibold", data.unrealized_pnl >= 0 ? "text-emerald-600" : "text-red-600")}>

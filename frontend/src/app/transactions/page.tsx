@@ -171,8 +171,8 @@ export default function TransactionsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">Transactions</h1>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <h1 className="text-xl font-bold text-gray-900 md:text-2xl">Transactions</h1>
         <Button onClick={() => setShowAddForm(true)}>
           <Plus className="mr-2 h-4 w-4" />
           Add Transaction
@@ -184,7 +184,7 @@ export default function TransactionsPage() {
         <Card>
           <CardContent className="pt-6">
             <p className="text-sm text-gray-500">Total Deposited</p>
-            <p className="font-mono text-xl font-semibold tabular-nums">
+            <p className="font-mono text-lg font-semibold tabular-nums sm:text-xl">
               <CurrencyDisplay value={totalDeposited} />
             </p>
           </CardContent>
@@ -192,7 +192,7 @@ export default function TransactionsPage() {
         <Card>
           <CardContent className="pt-6">
             <p className="text-sm text-gray-500">Total Withdrawn</p>
-            <p className="font-mono text-xl font-semibold tabular-nums">
+            <p className="font-mono text-lg font-semibold tabular-nums sm:text-xl">
               <CurrencyDisplay value={totalWithdrawn} />
             </p>
           </CardContent>
@@ -212,7 +212,7 @@ export default function TransactionsPage() {
                 </p>
               </PopoverContent>
             </Popover>
-            <p className="font-mono text-xl font-semibold tabular-nums">
+            <p className="font-mono text-lg font-semibold tabular-nums sm:text-xl">
               <CurrencyDisplay value={netInvested} showSign colored />
             </p>
           </CardContent>
@@ -233,7 +233,7 @@ export default function TransactionsPage() {
                 </p>
               </PopoverContent>
             </Popover>
-            <p className="font-mono text-xl font-semibold tabular-nums">
+            <p className="font-mono text-lg font-semibold tabular-nums sm:text-xl">
               <CurrencyDisplay
                 value={lifetimeGains?.lifetime_gain ?? 0}
                 showSign
@@ -255,7 +255,7 @@ export default function TransactionsPage() {
       {/* Filters */}
       <div className="flex flex-wrap items-center gap-3">
         <Select value={typeFilter} onValueChange={setTypeFilter}>
-          <SelectTrigger className="w-[160px]">
+          <SelectTrigger className="w-full sm:w-[160px]">
             <SelectValue placeholder="Type" />
           </SelectTrigger>
           <SelectContent>
@@ -274,7 +274,7 @@ export default function TransactionsPage() {
             type="date"
             value={dateFrom}
             onChange={(e) => setDateFrom(e.target.value)}
-            className="w-[160px]"
+            className="w-full sm:w-[160px]"
           />
         </div>
         <div className="flex items-center gap-2">
@@ -283,7 +283,7 @@ export default function TransactionsPage() {
             type="date"
             value={dateTo}
             onChange={(e) => setDateTo(e.target.value)}
-            className="w-[160px]"
+            className="w-full sm:w-[160px]"
           />
         </div>
       </div>
@@ -297,8 +297,8 @@ export default function TransactionsPage() {
                 <TableHead>Date</TableHead>
                 <TableHead>Type</TableHead>
                 <TableHead className="text-right">Amount</TableHead>
-                <TableHead>Description</TableHead>
-                <TableHead>Source</TableHead>
+                <TableHead className="hidden md:table-cell">Description</TableHead>
+                <TableHead className="hidden md:table-cell">Source</TableHead>
                 <TableHead className="text-right">Actions</TableHead>
               </TableRow>
             </TableHeader>
@@ -329,10 +329,10 @@ export default function TransactionsPage() {
                     <TableCell className="text-right">
                       <CurrencyDisplay value={txn.amount} />
                     </TableCell>
-                    <TableCell className="text-gray-500">
+                    <TableCell className="hidden text-gray-500 md:table-cell">
                       {txn.notes || "--"}
                     </TableCell>
-                    <TableCell>
+                    <TableCell className="hidden md:table-cell">
                       {txn.source === "auto_sync" ? (
                         <span className="inline-flex items-center rounded-full bg-blue-50 px-2 py-0.5 text-xs font-medium text-blue-700">
                           Auto

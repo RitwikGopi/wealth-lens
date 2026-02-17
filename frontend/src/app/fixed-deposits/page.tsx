@@ -91,8 +91,8 @@ export default function FixedDepositsPage() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">Fixed Deposits</h1>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <h1 className="text-xl font-bold text-gray-900 md:text-2xl">Fixed Deposits</h1>
         <Button onClick={() => setShowAddForm(true)}>
           <Plus className="mr-2 h-4 w-4" />
           Add FD
@@ -104,7 +104,7 @@ export default function FixedDepositsPage() {
         <Card>
           <CardContent className="pt-6">
             <p className="text-sm text-gray-500">Total Principal</p>
-            <p className="font-mono text-xl font-semibold tabular-nums">
+            <p className="font-mono text-lg font-semibold tabular-nums sm:text-xl">
               <CurrencyDisplay value={totalPrincipal} />
             </p>
           </CardContent>
@@ -112,7 +112,7 @@ export default function FixedDepositsPage() {
         <Card>
           <CardContent className="pt-6">
             <p className="text-sm text-gray-500">Total Current Value</p>
-            <p className="font-mono text-xl font-semibold tabular-nums">
+            <p className="font-mono text-lg font-semibold tabular-nums sm:text-xl">
               <CurrencyDisplay value={totalCurrentValue} />
             </p>
           </CardContent>
@@ -132,7 +132,7 @@ export default function FixedDepositsPage() {
                 </p>
               </PopoverContent>
             </Popover>
-            <p className="font-mono text-xl font-semibold tabular-nums">
+            <p className="font-mono text-lg font-semibold tabular-nums sm:text-xl">
               <CurrencyDisplay value={totalInterest} showSign colored />
             </p>
             {totalPrincipal > 0 && (
@@ -187,12 +187,12 @@ export default function FixedDepositsPage() {
                   <TableHead>Bank</TableHead>
                   <TableHead className="text-right">Principal</TableHead>
                   <TableHead className="text-right">Rate</TableHead>
-                  <TableHead>Start</TableHead>
-                  <TableHead>Maturity</TableHead>
+                  <TableHead className="hidden md:table-cell">Start</TableHead>
+                  <TableHead className="hidden md:table-cell">Maturity</TableHead>
                   <TableHead className="text-right">Current Value</TableHead>
-                  <TableHead className="text-right">Interest</TableHead>
+                  <TableHead className="hidden md:table-cell text-right">Interest</TableHead>
                   <TableHead>Status</TableHead>
-                  <TableHead>Tags</TableHead>
+                  <TableHead className="hidden md:table-cell">Tags</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -224,10 +224,10 @@ export default function FixedDepositsPage() {
                       <TableCell className="text-right font-mono tabular-nums">
                         {fd.interest_rate}%
                       </TableCell>
-                      <TableCell className="text-gray-500">
+                      <TableCell className="hidden text-gray-500 md:table-cell">
                         {formatDate(fd.start_date)}
                       </TableCell>
-                      <TableCell className="text-gray-500">
+                      <TableCell className="hidden text-gray-500 md:table-cell">
                         {formatDate(fd.maturity_date)}
                       </TableCell>
                       <TableCell className="text-right">
@@ -235,7 +235,7 @@ export default function FixedDepositsPage() {
                           value={fd.current_value || fd.principal}
                         />
                       </TableCell>
-                      <TableCell className="text-right">
+                      <TableCell className="hidden text-right md:table-cell">
                         <CurrencyDisplay value={interest} showSign colored />
                       </TableCell>
                       <TableCell>
@@ -249,7 +249,7 @@ export default function FixedDepositsPage() {
                             : "Matured"}
                         </StatusBadge>
                       </TableCell>
-                      <TableCell>
+                      <TableCell className="hidden md:table-cell">
                         <div className="flex gap-1">
                           {fd.tags?.map((tag) => (
                             <TagBadge

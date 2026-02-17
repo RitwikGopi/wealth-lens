@@ -1,7 +1,8 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Label } from "recharts";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
+import type { PieLabelRenderProps } from "recharts";
 import { formatINR, formatPercent } from "@/lib/format";
 import { AllocationByTag } from "@/types/portfolio";
 
@@ -31,9 +32,9 @@ export function AllocationPieChart({ data, totalValue }: AllocationPieChartProps
             Set allocation targets to see breakdown
           </div>
         ) : (
-          <div className="flex items-center gap-4">
-            <div style={{ width: 200, minHeight: 200 }}>
-              <ResponsiveContainer width={200} height={200}>
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center">
+            <div className="w-full max-w-[200px]">
+              <ResponsiveContainer width="100%" height={200}>
                 <PieChart>
                   <Pie
                     data={chartData}
@@ -43,7 +44,8 @@ export function AllocationPieChart({ data, totalValue }: AllocationPieChartProps
                     outerRadius={85}
                     dataKey="value"
                     stroke="none"
-                    label={({ cx, cy, midAngle, innerRadius, outerRadius, percentage }) => {
+                    label={(props: PieLabelRenderProps) => {
+                      const { cx, cy, midAngle, innerRadius, outerRadius, percentage } = props as unknown as Record<string, number>;
                       const RADIAN = Math.PI / 180;
                       const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
                       const x = cx + radius * Math.cos(-midAngle * RADIAN);

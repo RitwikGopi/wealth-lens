@@ -82,7 +82,7 @@ export function PortfolioGrowthChart({ snapshots }: PortfolioGrowthChartProps) {
 
   return (
     <Card>
-      <CardHeader className="flex flex-row items-center justify-between pb-2">
+      <CardHeader className="flex flex-col gap-2 pb-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-baseline gap-2">
           <CardTitle className="text-base font-medium text-gray-500">
             Portfolio Growth
@@ -184,7 +184,7 @@ export function PortfolioGrowthChart({ snapshots }: PortfolioGrowthChartProps) {
                 </LineChart>
               </ResponsiveContainer>
             </div>
-            <div className="mt-3 flex items-center justify-center gap-4">
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-4">
               {lineConfig.map((line) => {
                 const isVisible = visibleLines.has(line.dataKey);
                 return (

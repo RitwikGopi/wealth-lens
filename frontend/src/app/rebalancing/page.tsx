@@ -182,7 +182,7 @@ export default function RebalancingPage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold text-gray-900">Rebalancing</h1>
+      <h1 className="text-xl font-bold text-gray-900 md:text-2xl">Rebalancing</h1>
 
       {/* Current Drift Summary */}
       <Card>
@@ -291,7 +291,7 @@ export default function RebalancingPage() {
                   <TableHead>Date</TableHead>
                   <TableHead className="text-right">Sells</TableHead>
                   <TableHead className="text-right">Buys</TableHead>
-                  <TableHead>Moves</TableHead>
+                  <TableHead className="hidden md:table-cell">Moves</TableHead>
                   <TableHead className="w-10" />
                 </TableRow>
               </TableHeader>
@@ -306,7 +306,7 @@ export default function RebalancingPage() {
                     <TableCell className="text-right font-mono tabular-nums">
                       <CurrencyDisplay value={op.total_buys} />
                     </TableCell>
-                    <TableCell className="text-xs text-gray-500">
+                    <TableCell className="hidden text-xs text-gray-500 md:table-cell">
                       {op.moves.map((m) => (
                         <span key={m.id} className="mr-2">
                           {m.action === "sell" ? "Sell" : "Buy"} {m.investment}
@@ -338,7 +338,7 @@ export default function RebalancingPage() {
             <DialogTitle>Create Rebalancing Operation</DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label>Name *</Label>
                 <Input
@@ -371,7 +371,7 @@ export default function RebalancingPage() {
               {moves.map((move, index) => (
                 <div
                   key={index}
-                  className="flex items-end gap-2 rounded-md border p-3"
+                  className="flex flex-col gap-2 rounded-md border p-3 sm:flex-row sm:items-end"
                 >
                   <div className="space-y-1">
                     <Label className="text-xs">Action</Label>
