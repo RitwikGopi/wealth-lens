@@ -1,4 +1,4 @@
-.PHONY: backend frontend migrate test demo-data reset-db
+.PHONY: backend frontend migrate test demo-data reset-db docker-build docker-up docker-down
 
 backend:
 	cd backend && uv run uvicorn app.main:app --reload --port 8998
@@ -27,3 +27,12 @@ demo-data:
 reset-db:
 	rm -f backend/portfolio.db
 	cd backend && uv run alembic upgrade head
+
+docker-build:
+	docker compose build
+
+docker-up:
+	docker compose up -d
+
+docker-down:
+	docker compose down

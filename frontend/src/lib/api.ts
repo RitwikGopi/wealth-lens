@@ -1,5 +1,7 @@
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8998/api/v1";
+  typeof window !== "undefined"
+    ? `${window.location.origin}/api/v1`
+    : "http://backend:8998/api/v1";
 
 interface RequestOptions extends RequestInit {
   params?: Record<string, string>;
