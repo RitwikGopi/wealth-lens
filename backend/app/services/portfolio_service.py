@@ -174,6 +174,8 @@ def backfill_fd_snapshots(db: Session) -> int:
     """Generate daily historical snapshots from earliest FD start_date to yesterday.
 
     Only creates snapshots for dates that don't already have one.
+    Carries forward the most recent holdings_value from existing snapshots
+    so backfilled rows don't lose holdings data.
     Called after FD create/update so the growth chart is immediately populated.
     Returns the number of new snapshots created.
     """
@@ -193,16 +195,33 @@ def backfill_fd_snapshots(db: Session) -> int:
     if earliest > yesterday:
         return 0
 
-    # Get all existing snapshot dates for fast lookup
-    existing_dates = set(
-        db.execute(select(PortfolioSnapshot.date)).scalars().all()
+    # Get existing snapshots keyed by date for fast lookup and carry-forward
+    existing_snapshots = {
+        snap.date: snap
+        for snap in db.execute(select(PortfolioSnapshot)).scalars().all()
+    }
+
+    # Build sorted list of existing dates with holdings values for carry-forward
+    holdings_by_date = sorted(
+        [(d, s.holdings_value) for d, s in existing_snapshots.items()],
+        key=lambda x: x[0],
     )
+
+    def _carry_forward_holdings(as_of: date) -> float:
+        """Get the most recent holdings_value on or before as_of."""
+        result = 0.0
+        for d, hv in holdings_by_date:
+            if d <= as_of:
+                result = hv
+            else:
+                break
+        return result
 
     # Generate daily snapshots for missing dates
     created = 0
     current = earliest
     while current <= yesterday:
-        if current not in existing_dates:
+        if current not in existing_snapshots:
             # Calculate FD value as of this date (use all FDs, not just active)
             fd_value = 0.0
             for fd in fds:
@@ -226,6 +245,9 @@ def backfill_fd_snapshots(db: Session) -> int:
                 else:
                     fd_value += fd.principal
 
+            holdings_value = _carry_forward_holdings(current)
+            total_value = holdings_value + fd_value
+
             active_principal = sum(
                 fd.principal
                 for fd in fds
@@ -234,17 +256,17 @@ def backfill_fd_snapshots(db: Session) -> int:
             )
             breakdown = json.dumps(
                 {
-                    "holdings_value": 0.0,
+                    "holdings_value": holdings_value,
                     "fd_value": fd_value,
-                    "total_pnl": fd_value - active_principal,
+                    "total_pnl": total_value - active_principal,
                 }
             )
 
             db.add(
                 PortfolioSnapshot(
                     date=current,
-                    total_value=fd_value,
-                    holdings_value=0.0,
+                    total_value=total_value,
+                    holdings_value=holdings_value,
                     fd_value=fd_value,
                     breakdown=breakdown,
                 )
