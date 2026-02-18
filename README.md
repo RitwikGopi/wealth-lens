@@ -202,6 +202,28 @@ Once the backend is running, visit http://localhost:8998/docs for the interactiv
 | GET    | `/api/v1/tags/tree`         | Tag tree with investment counts      |
 | GET    | `/api/v1/allocations/drift` | Allocation drift analysis            |
 
+## Known Limitations & Caveats
+
+### Zerodha sync sell price is approximate
+
+When holdings quantity decreases between syncs, the system records a `sell` transaction using `last_price` (the current market price at sync time) — not the actual trade execution price. If the sync runs hours after the trade, the recorded price may differ from reality.
+
+### Cash in demat account is not tracked
+
+When you sell stocks, the proceeds sit as cash in your Zerodha trading account. The portfolio system only tracks holdings and FDs — it has no visibility into the demat cash balance. This means:
+
+- Portfolio value appears lower than reality while cash sits idle
+- The gap resolves when the cash is reinvested (buy stocks/FDs) or withdrawn
+- For accurate numbers, reinvest or record a withdrawal promptly after selling
+
+### FD rebalancing requires manual flags
+
+When creating an FD from portfolio proceeds (e.g. stock sale), you must check **"Funded from existing portfolio"** to avoid a spurious deposit transaction. Similarly, when closing an FD to reinvest, check **"Reinvesting into portfolio"** to avoid a spurious withdrawal. Forgetting these flags will inflate Total Deposited / Total Withdrawn and skew lifetime gain calculations.
+
+### Snapshot backfill carries forward holdings values
+
+The FD snapshot backfill creates historical entries for dates without snapshots. Since actual historical stock prices aren't available for those dates, it carries forward the last known `holdings_value`. This is an approximation — the growth chart for periods before regular daily snapshots began may not reflect actual day-to-day holdings fluctuations.
+
 ## Environment Variables
 
 Configure in `backend/.env`:
